@@ -1,3 +1,4 @@
+//app(blog)/page.tsx
 import Link from 'next/link';
 import { getAllArticles } from '@/lib/articles';
 
