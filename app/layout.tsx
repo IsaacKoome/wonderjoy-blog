@@ -30,10 +30,37 @@ export default function RootLayout({
               <Link href="/articles" className="text-gray-600 hover:text-pink-600 transition">
                 Articles
               </Link>
+              <Link href="/about" className="text-gray-600 hover:text-pink-600 transition">About</Link>
+              <Link href="/contact" className="text-gray-600 hover:text-pink-600 transition">Contact</Link>
             </div>
           </div>
         </nav>
         {children}
+        <footer className="bg-gray-900 text-white mt-20">
+  <div className="max-w-6xl mx-auto px-4 py-12">
+    <div className="grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 className="text-xl font-bold mb-4">Wonderjoy AI</h3>
+        <p className="text-gray-400">Daily guidance to healthy, glowing skin.</p>
+      </div>
+      <div>
+        <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+        <ul className="space-y-2">
+          <li><Link href="/about" className="text-gray-400 hover:text-white transition">About</Link></li>
+          <li><Link href="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
+          <li><Link href="/privacy" className="text-gray-400 hover:text-white transition">Privacy Policy</Link></li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="text-xl font-bold mb-4">Connect</h3>
+        <p className="text-gray-400">Coming soon: Newsletter & Social Media</p>
+      </div>
+    </div>
+    <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2026 Wonderjoy AI. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
       </body>
     </html>
   );
