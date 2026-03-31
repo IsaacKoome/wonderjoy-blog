@@ -33,13 +33,13 @@ export default function Home() {
                 />
               )}
               <div className="p-6">
-                <p className="text-sm text-pink-500 mb-2">
-                  {new Date(article.date).toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                  })}
-                </p>
+              <p className="text-sm text-pink-500 mb-2">
+  {article.date ? new Date(article.date).toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  }) : 'Recent'}
+</p>
                 <h3 className="text-xl font-semibold text-gray-800 group-hover:text-pink-600 transition">
                   {article.title}
                 </h3>
