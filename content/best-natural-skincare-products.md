@@ -49,7 +49,7 @@ I've curated the best natural and clean skincare products across every category.
 
 ### 1. Cleanser: Ursa Major Fantastic Face Wash
 
-**Price:** $28 | [**Shop on Amazon →**](https://amazon.com/dp/B00LJTJ82U?tag=wonderjoyai-20)
+**Price:** $28 | [**Shop on Amazon →**](https://www.amazon.com?&linkCode=ll2&tag=&linkId=bb6f280b2cdeca5393608c1c7cf4aa0d&language=en_US&ref_=as_li_ss_tl)
 
 **Why it's great:** This gel cleanser uses natural ingredients like aloe, sugar cane, and pine to clean without stripping. It's gentle enough for daily use but effective enough to remove makeup.
 
