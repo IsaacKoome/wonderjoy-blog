@@ -8,6 +8,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Wonderjoy AI - Daily Skincare Guidance',
   description: 'Simple skincare tips, routines, and solutions that actually work for healthy, glowing skin.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -17,6 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>
         <nav className="bg-white shadow-sm sticky top-0 z-10">
           <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">

@@ -1,13 +1,8 @@
-\---
-
+---
 title: "Best Serums for Dark Spots: 10 Formulas That Actually Fade Hyperpigmentation"
-
-date: "2026-04-01"
-
+date: 2026-04-01
 excerpt: "Dark spots don't have to be permanent. These 10 dermatologist-approved serums target hyperpigmentation at the source."
-
-\---
-
+---
 
 
 \# Best Serums for Dark Spots: 10 Formulas That Actually Fade Hyperpigmentation
