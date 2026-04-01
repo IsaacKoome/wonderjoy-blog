@@ -1,5 +1,3 @@
-// app/(blog)/articles/[slug]/page.tsx 
-
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -58,21 +56,28 @@ export default async function ArticlePage({
           </div>
         </header>
 
-        {/* Article Content with Typography */}
+        {/* Article Content with Typography - FIXED TABLE STYLING */}
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 lg:p-12">
-          <div className="prose prose-lg prose-pink max-w-none 
+          <div className="prose prose-slate max-w-none 
                         prose-headings:text-gray-900 
-                        prose-h1:text-3xl prose-h1:font-bold prose-h1:mb-6
+                        prose-h1:text-3xl prose-h1:font-bold prose-h1:mb-6 prose-h1:text-gray-900
                         prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-8 prose-h2:mb-4 prose-h2:text-pink-700
-                        prose-h3:text-xl prose-h3:font-medium prose-h3:mt-6 prose-h3:mb-3
+                        prose-h3:text-xl prose-h3:font-medium prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-gray-800
                         prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
-                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6
-                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6
+                        prose-ul:text-gray-700 prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6
+                        prose-ol:text-gray-700 prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6
                         prose-li:text-gray-700 prose-li:mb-2
                         prose-strong:text-pink-600 prose-strong:font-semibold
                         prose-a:text-pink-500 prose-a:no-underline hover:prose-a:underline
                         prose-blockquote:border-l-4 prose-blockquote:border-pink-300 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-600
-                        prose-img:rounded-xl prose-img:shadow-md">
+                        prose-img:rounded-xl prose-img:shadow-md
+                        prose-table:w-full prose-table:border-collapse prose-table:my-6
+                        prose-th:border prose-th:border-gray-300 prose-th:bg-gray-100 prose-th:p-3 prose-th:text-left prose-th:text-gray-800 prose-th:font-semibold
+                        prose-td:border prose-td:border-gray-300 prose-td:p-3 prose-td:text-gray-700
+                        prose-tr:bg-white
+                        [&_table]:w-full [&_table]:border-collapse [&_table]:my-6
+                        [&_th]:border [&_th]:border-gray-300 [&_th]:bg-gray-100 [&_th]:p-3 [&_th]:text-left [&_th]:text-gray-800 [&_th]:font-semibold
+                        [&_td]:border [&_td]:border-gray-300 [&_td]:p-3 [&_td]:text-gray-700">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {article.content}
             </ReactMarkdown>
