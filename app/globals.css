@@ -54,3 +54,58 @@ body {
 .prose tr {
   background-color: white;
 }
+
+/* Force all article text to be dark and readable */
+.prose {
+  color: #1f2937 !important;
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose li,
+.prose blockquote,
+.prose dl,
+.prose dd,
+.prose dt {
+  color: #374151 !important;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: #111827 !important;
+}
+
+.prose strong,
+.prose b {
+  color: #db2777 !important;
+}
+
+.prose a {
+  color: #db2777 !important;
+}
+
+.prose a:hover {
+  color: #be185d !important;
+}
+
+/* Fix for product descriptions and bold text */
+.prose strong,
+.prose b {
+  font-weight: 600;
+}
+
+/* Ensure all text within the article content is dark */
+.prose *:not(strong):not(b):not(a):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  color: #374151;
+}
+
+/* But keep strong/bold pink as intended */
+.prose strong,
+.prose b {
+  color: #db2777 !important;
+}
