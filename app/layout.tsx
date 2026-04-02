@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -86,6 +87,9 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        
+        {/* Google Analytics */}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html>
   );
