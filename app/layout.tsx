@@ -31,7 +31,7 @@ export default function RootLayout({
         <nav className="bg-white shadow-sm sticky top-0 z-10">
           <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <Link href="/" className="text-2xl font-bold text-pink-600">
-              Wonderjoy AI
+              WJoy AI
             </Link>
             <div className="space-x-6">
               <Link href="/" className="text-gray-600 hover:text-pink-600 transition">
