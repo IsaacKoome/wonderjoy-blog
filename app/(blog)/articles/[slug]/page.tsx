@@ -26,7 +26,6 @@ export default async function ArticlePage({
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-pink-50">
       <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Article Header */}
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {article.title}
@@ -42,12 +41,11 @@ export default async function ArticlePage({
           </div>
         </header>
 
-        {/* Article Content - Simplified */}
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
           <div className="prose prose-lg max-w-none">
             <ReactMarkdown 
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={rehypeRaw}  //add this line
+              remarkPlugins={[remarkGfm]} 
+              rehypePlugins={[rehypeRaw]}
             >
               {article.content}
             </ReactMarkdown>
