@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { getAllArticles, getArticleBySlug } from '@/lib/articles';
 
 export async function generateStaticParams() {
@@ -44,7 +45,10 @@ export default async function ArticlePage({
         {/* Article Content - Simplified */}
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
           <div className="prose prose-lg max-w-none">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown 
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={rehypeRaw}  //add this line
+            >
               {article.content}
             </ReactMarkdown>
           </div>
