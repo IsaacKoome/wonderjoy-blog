@@ -31,7 +31,7 @@ That's it. No 10-step routines. No $100 serums.
 
 ## The 4 Products You Actually Need
 
-![CeraVe cleanser, moisturizer, and sunscreen products](/images/beginners-products.jpg)
+![CeraVe cleanser, moisturizer, and sunscreen products](/images/skincare-starterkit.jpg)
 
 ### 1. Cleanser: CeraVe Hydrating Facial Cleanser
 
