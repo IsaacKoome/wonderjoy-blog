@@ -6,7 +6,7 @@ excerpt: "Does price determine quality? We compare drugstore vs luxury skincare 
 
 # Cheap vs Expensive Skincare: Which Is Actually Better?
 
-![Drugstore vs luxury skincare products comparison](/skincare-products.jpg)
+![Drugstore vs luxury skincare products comparison](/images/skincare-products.jpg)
 
 Is expensive skincare worth the money? Or are you just paying for fancy packaging?
 

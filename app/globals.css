@@ -109,3 +109,53 @@ body {
 .prose b {
   color: #db2777 !important;
 }
+
+/* Amazon Shopping Button - Orange (Amazon brand) */
+.amazon-btn {
+  display: inline-block;
+  background-color: #FF9900 !important;
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  margin: 4px 0;
+}
+
+.amazon-btn:hover {
+  background-color: #E68A00 !important;
+  transform: translateY(-1px);
+}
+
+/* Alternative Blue Button */
+.blue-btn {
+  display: inline-block;
+  background-color: #3B82F6 !important;
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.blue-btn:hover {
+  background-color: #2563EB !important;
+}
+
+/* Table shop links styling */
+.shop-table a {
+  display: inline-block;
+  background-color: #FF9900;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.shop-table a:hover {
+  background-color: #E68A00;
+}
