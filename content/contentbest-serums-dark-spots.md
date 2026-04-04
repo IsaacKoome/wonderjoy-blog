@@ -1,609 +1,175 @@
 ---
 title: "Best Serums for Dark Spots: 10 Formulas That Actually Fade Hyperpigmentation"
-date: 2026-04-01
-excerpt: "Dark spots don't have to be permanent. These 10 dermatologist-approved serums target hyperpigmentation at the source."
+date: 2026-04-04
+excerpt: "Dark spots don't have to be permanent. These dermatologist-approved serums target hyperpigmentation at the source."
 ---
 
+# Best Serums for Dark Spots: 10 Formulas That Actually Fade Hyperpigmentation
 
-\# Best Serums for Dark Spots: 10 Formulas That Actually Fade Hyperpigmentation
+![Dark spot treatment serums including vitamin C and niacinamide](/images/hyperpigmentation.jpg)
 
+Dark spots. Age spots. Sun spots. Post-acne marks. Whatever you call them, they're one of the most stubborn skincare concerns.
 
+The good news? The right serum can fade them dramatically.
 
-Dark spots, age spots, post-acne marks—whatever you call them, they're one of the most stubborn skincare concerns. The good news? The right serum can fade them dramatically.
+Here are the best dark spot serums that actually work.
 
+---
 
+## 🧪 What Actually Fades Dark Spots?
 
-I've curated the best dark spot serums across every budget, from drugstore finds to medical-grade treatments.
-
-
-
-\---
-
-
-
-\## Quick Comparison: Best Serums for Dark Spots
-
-
-
-| \*\*Product\*\* | \*\*Key Ingredients\*\* | \*\*Price\*\* | \*\*Best For\*\* |
-
-|-------------|---------------------|----------|--------------|
-
-| The Ordinary Alpha Arbutin 2% + HA | Alpha arbutin, hyaluronic acid | $9.90 | Budget, beginners |
-
-| SkinCeuticals C E Ferulic | Vitamin C, vitamin E, ferulic acid | $182 | Premium, fastest results |
-
-| Naturium Tranexamic Topical Acid | Tranexamic acid, kojic acid | $20 | Melasma, stubborn spots |
-
-| Faded by Topicals | Tranexamic acid, niacinamide, azelaic acid | $36 | Post-acne marks |
-
-| Good Molecules Discoloration Correcting Serum | Tranexamic acid, niacinamide | $12 | Affordable daily use |
-
-| Murad Rapid Dark Spot Correcting Serum | Hydroquinone, glycolic acid | $65 | Quick results |
-
-| Paula's Choice Clinical Discoloration Repair | Tranexamic acid, niacinamide | $42 | Sensitive skin |
-
-| Caudalie Vinoperfect Radiance Serum | Viniferine (patented) | $79 | Natural alternative |
-
-| Urban Skin Rx Even Tone Serum | Tranexamic acid, kojic acid | $45 | Darker skin tones |
-
-| Drunk Elephant C-Firma Fresh | Vitamin C, pumpkin ferment | $78 | Brightening + anti-aging |
-
-
-
-\---
-
-
-
-\## How Dark Spot Serums Work
-
-
-
-Different ingredients target hyperpigmentation in different ways:
-
-
-
-| \*\*Ingredient\*\* | \*\*How It Works\*\* | \*\*Best For\*\* |
-
+| **Ingredient** | **How It Works** | **Best For** |
 |----------------|------------------|--------------|
+| Vitamin C | Blocks melanin production | Sun spots, brightening |
+| Niacinamide | Interrupts pigment transfer | Post-acne marks |
+| Retinoids | Speeds cell turnover | Stubborn spots |
+| Tranexamic Acid | Prevents pigment spread | Melasma |
 
-| \*\*Vitamin C\*\* | Blocks melanin production | Sun spots, general brightening |
+---
 
-| \*\*Tranexamic Acid\*\* | Prevents pigment transfer | Melasma, stubborn spots |
+## ✨ The 3 Best Serums for Dark Spots
 
-| \*\*Alpha Arbutin\*\* | Gentle melanin inhibitor | Beginners, sensitive skin |
+![The Ordinary Alpha Arbutin, Good Molecules Discoloration Serum, and Naturium Tranexamic Acid](/images/dark-spot-serums-products.jpg)
 
-| \*\*Kojic Acid\*\* | Natural melanin blocker | Sun spots, age spots |
+You don't need 10 serums. You need the right one for your skin.
 
-| \*\*Niacinamide\*\* | Interrupts pigment transfer | Post-acne marks |
+---
 
-| \*\*Azelaic Acid\*\* | Anti-inflammatory + brightening | Redness + dark spots |
+### 1. The Ordinary Alpha Arbutin 2% + HA (Best Budget)
 
-| \*\*Hydroquinone\*\* | Strongest melanin inhibitor | Stubborn spots (short-term use) |
+**Price:** $9.90
 
+Alpha arbutin is a gentle but effective melanin inhibitor. Combined with hyaluronic acid, it hydrates while it brightens. Perfect for beginners.
 
+**Best for:** Sun spots, general brightening, sensitive skin
 
-\---
+<div style="margin: 20px 0;">
+  <a href="https://www.amazon.com/Ordinary-Arbutin-Hyaluronic-Brightens-Targets/dp/B0DN6RDJ2H?crid=2TDBLD4L5X4EU&dib=eyJ2IjoiMSJ9.4eoIbBX0jPaeikgjcjjJm409Hlala9L4ryDQ7CeWnwH84PFWRviLECm7PoY3g__ULQ8Mj0aIwOFj-LWZhgPdEZfY0cavn5Li2iaetUVTkUpTSfeYqD5CPKXXQRRwRpKLTNVCy1l8VDHBS7JW2eboreR7CtApjww9-dmkXRxK8cQRKS2JcR9Wq0TpNFR4MfYyQE0M7r6sROJ_rpsKlSCw6zKHF5TXu9IWXFDZiNtWOqA2TrtnBv8j2JMFCz8TmoEksCYqB6PTM3pCHJkxw2cs4P9W9Cv4-s5lfAJxFX-EzzQ.R1OIGO7U36M1Tz8-hQ2Kk4c56ORW9ng7RG3QMvmD0GY&dib_tag=se&keywords=The%2BOrdinary%2BAlpha%2BArbutin%2B2%25%2B%2B%2BHA&qid=1775281876&sprefix=%2Caps%2C1202&sr=8-1&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=31f7dceea960f5bd88f4c406cf6479bd&language=en_US&ref_=as_li_ss_tl" target="_blank" 
+     style="background: linear-gradient(135deg, #f093fb, #f5576c); 
+            color: white; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 600;
+            display: inline-block;">
+    ✨ Shop The Ordinary on Amazon
+  </a>
+</div>
 
+---
 
+### 2. Good Molecules Discoloration Correcting Serum (Best for Daily Use)
 
-\## Detailed Product Reviews
+**Price:** $12.00
 
+This serum delivers tranexamic acid and niacinamide in a lightweight formula. It's gentle enough for daily use and effective enough to see results.
 
+**Best for:** Post-acne marks, daily use, beginners
 
-\### 1. The Ordinary Alpha Arbutin 2% + HA
+<div style="margin: 20px 0;">
+  <a href="https://www.amazon.com/Good-Molecules-Discoloration-Correcting-Serum/dp/B0BX32CXP6?content-id=amzn1.sym.41aacd50-19a4-47fc-ad43-b54fbcc792ee%3Aamzn1.sym.41aacd50-19a4-47fc-ad43-b54fbcc792ee&crid=675V9C49UFFA&cv_ct_cx=Good%2BMolecules%2BDiscoloration%2BCorrecting%2BSerum&keywords=Good%2BMolecules%2BDiscoloration%2BCorrecting%2BSerum&pd_rd_i=B0BX32CXP6&pd_rd_r=01adb6ba-194c-4dd4-ab85-6dab0011d679&pd_rd_w=KGW7Z&pd_rd_wg=mEKSO&pf_rd_p=41aacd50-19a4-47fc-ad43-b54fbcc792ee&pf_rd_r=DXHFANA93BBVA6EK56K6&qid=1775288701&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=%2Caps%2C1037&sr=1-1-e169343e-09af-4d41-85b1-8335fe8f32d0-spons&aref=ShNqz9AhI1&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=0f536e4b654de308eeaed0a5425a9bfa&language=en_US&ref_=as_li_ss_tl" target="_blank" 
+     style="background: linear-gradient(135deg, #fa709a, #fee140); 
+            color: white; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 600;
+            display: inline-block;">
+    🌟 Shop Good Molecules on Amazon
+  </a>
+</div>
 
+---
 
+### 3. Naturium Tranexamic Topical Acid (Best for Stubborn Spots)
 
-\*\*Price:\*\* $9.90 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B01M1AJ6N2?tag=wonderjoyai-20)
+**Price:** $20.00
 
+This serum combines multiple brightening ingredients: tranexamic acid, kojic acid, and niacinamide. It's especially effective for melasma and stubborn hormonal pigmentation.
 
+**Best for:** Stubborn spots, melasma, dark skin tones
 
-\*\*Why it's the best budget option:\*\* Alpha arbutin is a gentle but effective melanin inhibitor. Combined with hyaluronic acid, it hydrates while it brightens. This is the perfect starting point for beginners.
+<div style="margin: 20px 0;">
+  <a href="https://www.amazon.com/Tranexamic-Topical-Acid-5-Melasma/dp/B086YZRHH7?crid=1MXHAG1KHYKNU&dib=eyJ2IjoiMSJ9.QZrgLHXpilbeYvwT-B8jHE68eBG9zu1LJalOilNzLSe1lZ1u6mup-uhLsI7IswJCZ2rsUeHg-KJ-HgtMEz8_uLEQ6TQkQb3UmtdPi5g7z0qBRVtqeQBT2DkdCu5rK2Iop_xX9UMpOM-dKW-EgEdAjvIMo5_QDidEtFHCiOT2WLZhddEDRmyGVXa-2mlOTq5T9WnWRrrDxWBE_u8g5uns7uEJbS2_3X22tNGZWzFY6YNZTktMwaNpoZK-PzHsvXINGBVxD6S5fHjJ17kwgQusSXj3U-vPwskhE3lDNQtlLJk.geyr1QluKkG_I0dpcnllY7-4Yptq37FbgIWCLrYIr8g&dib_tag=se&keywords=Naturium%2BTranexamic%2BTopical%2BAcid&qid=1775288818&sprefix=good%2Bmolecules%2Bdiscoloration%2Bc%2Caps%2C864&sr=8-1&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=0f5c90a3ef83eee7b6f46dac891b19a8&language=en_US&ref_=as_li_ss_tl" target="_blank" 
+     style="background: linear-gradient(135deg, #a18cd1, #fbc2eb); 
+            color: white; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 600;
+            display: inline-block;">
+    💜 Shop Naturium on Amazon
+  </a>
+</div>
 
+---
 
+## 📋 7 More Dark Spot Serums to Consider
 
-\*\*Key ingredients:\*\* Alpha arbutin, hyaluronic acid
+| **Product** | **Key Ingredient** | **Best For** |
+|-------------|---------------------|--------------|
+| SkinCeuticals C E Ferulic | Vitamin C | Premium, fastest results |
+| Faded by Topicals | Tranexamic + Azelaic | Post-acne marks |
+| Murad Rapid Dark Spot | Hydroquinone | Stubborn spots |
+| Paula's Choice Discoloration Repair | Tranexamic + Niacinamide | Sensitive skin |
+| Caudalie Vinoperfect | Viniferine | Natural alternative |
+| Urban Skin Rx Even Tone | Tranexamic + Kojic | Darker skin tones |
+| Drunk Elephant C-Firma | Vitamin C | Brightening + anti-aging |
 
-\*\*Texture:\*\* Lightweight serum
+---
 
-\*\*Best for:\*\* Beginners, sensitive skin, all skin tones
+## 🧴 The Complete Dark Spot Routine
 
-
-
-\*\*How to use:\*\* Apply morning and night after cleansing.
-
-
-
-\*\*Pros:\*\* Affordable, gentle, effective for mild spots
-
-\*\*Cons:\*\* Takes longer than stronger alternatives
-
-
-
-> \*Over 10,000 5-star reviews\*
-
-
-
-\---
-
-
-
-\### 2. SkinCeuticals C E Ferulic
-
-
-
-\*\*Price:\*\* $182 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B00555X8NU?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's the gold standard:\*\* This is the vitamin C serum that every other vitamin C serum is compared to. The patented combination of 15% vitamin C, 1% vitamin E, and 0.5% ferulic acid provides unmatched antioxidant protection while fading dark spots.
-
-
-
-\*\*Key ingredients:\*\* L-ascorbic acid, vitamin E, ferulic acid
-
-\*\*Texture:\*\* Lightweight liquid
-
-\*\*Best for:\*\* Serious brightening, anti-aging
-
-
-
-\*\*How to use:\*\* Apply 4-5 drops morning only. Follow with sunscreen.
-
-
-
-\*\*Pros:\*\* Clinically proven, visible results within weeks
-
-\*\*Cons:\*\* Expensive, oxidizes quickly (use within 3 months)
-
-
-
-\---
-
-
-
-\### 3. Naturium Tranexamic Topical Acid
-
-
-
-\*\*Price:\*\* $20 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B08K2X1H7S?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's a cult favorite:\*\* This serum combines multiple brightening ingredients: tranexamic acid, kojic acid, and niacinamide. It's especially effective for melasma and stubborn hormonal pigmentation.
-
-
-
-\*\*Key ingredients:\*\* Tranexamic acid, kojic acid, niacinamide
-
-\*\*Texture:\*\* Gel-cream
-
-\*\*Best for:\*\* Stubborn spots, melasma
-
-
-
-\*\*How to use:\*\* Apply twice daily. Can be used with other actives.
-
-
-
-\*\*Pros:\*\* Multi-ingredient formula, fragrance-free, affordable
-
-\*\*Cons:\*\* Thicker texture may not layer well for some
-
-
-
-\---
-
-
-
-\### 4. Faded by Topicals
-
-
-
-\*\*Price:\*\* $36 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B08F7J9M2W?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's unique:\*\* This cream is packed with 12 brightening ingredients: tranexamic acid, azelaic acid, kojic acid, niacinamide, and more. It's specifically formulated for post-acne marks on deeper skin tones.
-
-
-
-\*\*Key ingredients:\*\* Tranexamic acid, azelaic acid, niacinamide, licorice root
-
-\*\*Texture:\*\* Rich cream
-
-\*\*Best for:\*\* Post-acne marks, body hyperpigmentation
-
-
-
-\*\*How to use:\*\* Apply to clean skin, start with 2-3 times per week to assess tolerance.
-
-
-
-\*\*Pros:\*\* Multi-active, works on body, inclusive formulation
-
-\*\*Cons:\*\* Strong smell, can cause purging initially
-
-
-
-\---
-
-
-
-\### 5. Good Molecules Discoloration Correcting Serum
-
-
-
-\*\*Price:\*\* $12 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B08CXDY1SV?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's a steal:\*\* At $12, this serum delivers tranexamic acid and niacinamide in a lightweight formula. It's gentle enough for daily use and effective enough to see results.
-
-
-
-\*\*Key ingredients:\*\* Tranexamic acid, niacinamide
-
-\*\*Texture:\*\* Lightweight gel
-
-\*\*Best for:\*\* Daily use, beginners
-
-
-
-\*\*How to use:\*\* Apply twice daily.
-
-
-
-\*\*Pros:\*\* Affordable, gentle, effective
-
-\*\*Cons:\*\* Slower results than stronger formulas
-
-
-
-\---
-
-
-
-\### 6. Murad Rapid Dark Spot Correcting Serum
-
-
-
-\*\*Price:\*\* $65 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B01M0L7U1K?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's fast-acting:\*\* This serum uses hydroquinone (2%) combined with glycolic acid for rapid results. Hydroquinone is the gold standard for stubborn dark spots—but should be used in short cycles.
-
-
-
-\*\*Key ingredients:\*\* Hydroquinone 2%, glycolic acid
-
-\*\*Texture:\*\* Lightweight serum
-
-\*\*Best for:\*\* Stubborn spots, quick results
-
-
-
-\*\*How to use:\*\* Apply once daily (night) for up to 3 months, then take a break.
-
-
-
-\*\*Pros:\*\* Fast results, clinically proven
-
-\*\*Cons:\*\* Contains hydroquinone (use in cycles), premium price
-
-
-
-\---
-
-
-
-\### 7. Paula's Choice Clinical Discoloration Repair
-
-
-
-\*\*Price:\*\* $42 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B07ZR8Y8Z1?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's great for sensitive skin:\*\* This fragrance-free serum combines tranexamic acid, niacinamide, and bakuchiol. It's powerful but gentle enough for sensitive, reactive skin.
-
-
-
-\*\*Key ingredients:\*\* Tranexamic acid, niacinamide, bakuchiol
-
-\*\*Texture:\*\* Lightweight lotion
-
-\*\*Best for:\*\* Sensitive skin, all types of hyperpigmentation
-
-
-
-\*\*How to use:\*\* Apply twice daily.
-
-
-
-\*\*Pros:\*\* Gentle, fragrance-free, effective
-
-\*\*Cons:\*\* Takes longer than hydroquinone-based options
-
-
-
-\---
-
-
-
-\### 8. Caudalie Vinoperfect Radiance Serum
-
-
-
-\*\*Price:\*\* $79 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B07N4P6R4S?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's a natural alternative:\*\* Caudalie uses patented viniferine (derived from grapevines) which clinical studies show is 62x more effective than vitamin C. It's natural, gentle, and gives an immediate radiance boost.
-
-
-
-\*\*Key ingredients:\*\* Viniferine, squalane
-
-\*\*Texture:\*\* Lightweight cream
-
-\*\*Best for:\*\* Clean beauty, natural alternatives
-
-
-
-\*\*How to use:\*\* Apply morning and night.
-
-
-
-\*\*Pros:\*\* Natural, gentle, instant radiance
-
-\*\*Cons:\*\* Expensive, slower on stubborn spots
-
-
-
-\---
-
-
-
-\### 9. Urban Skin Rx Even Tone Serum
-
-
-
-\*\*Price:\*\* $45 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B07H2M4P5X?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's formulated for deeper skin tones:\*\* This serum was created specifically for melanin-rich skin, which is more prone to hyperpigmentation. It uses tranexamic acid, kojic acid, and azelaic acid.
-
-
-
-\*\*Key ingredients:\*\* Tranexamic acid, kojic acid, azelaic acid
-
-\*\*Texture:\*\* Lightweight serum
-
-\*\*Best for:\*\* Darker skin tones, post-inflammatory hyperpigmentation
-
-
-
-\*\*How to use:\*\* Apply twice daily.
-
-
-
-\*\*Pros:\*\* Formulated for melanin-rich skin, multi-active
-
-\*\*Cons:\*\* Contains fragrance
-
-
-
-\---
-
-
-
-\### 10. Drunk Elephant C-Firma Fresh
-
-
-
-\*\*Price:\*\* $78 | \[\*\*Shop on Amazon →\*\*](https://amazon.com/dp/B0825V8T5L?tag=wonderjoyai-20)
-
-
-
-\*\*Why it's unique:\*\* This vitamin C serum is mixed fresh by the user, ensuring maximum potency. It contains 15% L-ascorbic acid plus pumpkin ferment and pomegranate extract for brightening.
-
-
-
-\*\*Key ingredients:\*\* L-ascorbic acid, pumpkin ferment, pomegranate extract
-
-\*\*Texture:\*\* Lightweight gel
-
-\*\*Best for:\*\* Fresh, potent vitamin C
-
-
-
-\*\*How to use:\*\* Mix before first use, apply mornings.
-
-
-
-\*\*Pros:\*\* Freshly mixed = maximum potency, clean formulation
-
-\*\*Cons:\*\* Expensive, must be used within 6 months
-
-
-
-\---
-
-
-
-\## How to Choose the Right Dark Spot Serum
-
-
-
-\### By Skin Concern:
-
-
-
-| \*\*If You Have...\*\* | \*\*Choose...\*\* |
-
-|-------------------|---------------|
-
-| Sun spots | Vitamin C serum (SkinCeuticals or Drunk Elephant) |
-
-| Melasma | Tranexamic acid (Naturium or Paula's Choice) |
-
-| Post-acne marks | Multi-ingredient (Faded or Good Molecules) |
-
-| Stubborn spots | Hydroquinone (Murad) |
-
-| Sensitive skin | Gentle formula (Good Molecules or Paula's Choice) |
-
-| Budget | The Ordinary or Good Molecules |
-
-
-
-\### By Budget:
-
-
-
-| \*\*Budget\*\* | \*\*Best Options\*\* |
-
-|------------|------------------|
-
-| Under $15 | The Ordinary, Good Molecules |
-
-| $15-40 | Naturium, Faded, Paula's Choice |
-
-| $40-80 | Murad, Drunk Elephant, Urban Skin Rx |
-
-| $80+ | SkinCeuticals |
-
-
-
-\---
-
-
-
-\## Complete Dark Spot Routine
-
-
-
-\*\*Morning:\*\*
-
-1\. Gentle cleanser
-
-2\. \[\*\*Vitamin C serum\*\*](affiliate-link)
-
-3\. Moisturizer
-
-4\. Sunscreen SPF 30+ (essential!)
-
-
-
-\*\*Evening:\*\*
-
-1\. Gentle cleanser
-
-2\. \[\*\*Treatment serum\*\*](affiliate-link) (tranexamic acid or alpha arbutin)
-
-3\. Moisturizer
-
-
-
-\*\*Weekly:\*\*
-
-\- Gentle exfoliant (lactic or glycolic acid) 2-3 times per week
-
-
-
-\---
-
-
-
-\## Realistic Timeline for Results
-
-
-
-| \*\*Timeframe\*\* | \*\*What to Expect\*\* |
-
+| **Time** | **Step** | **Product Type** |
+|----------|----------|------------------|
+| Morning | Cleanse | Gentle cleanser |
+| Morning | Treat | Vitamin C serum |
+| Morning | Moisturize | Lightweight moisturizer |
+| Morning | Protect | Sunscreen SPF 30+ (essential!) |
+| Evening | Cleanse | Gentle cleanser |
+| Evening | Treat | Dark spot serum |
+| Evening | Moisturize | Night cream |
+
+---
+
+## ⏰ Realistic Timeline for Results
+
+| **Timeframe** | **What to Expect** |
 |---------------|-------------------|
-
-| 2-4 weeks | Skin appears brighter overall |
-
+| 2-4 weeks | Skin looks brighter overall |
 | 8-12 weeks | Dark spots start visibly fading |
-
 | 4-6 months | Significant improvement |
+| 6-12 months | Maximum results |
 
-| 6-12 months | Maximum results (for stubborn spots) |
+> 💡 **Important:** Dark spot treatment requires patience and daily sunscreen. Without SPF, no serum will work effectively.
 
+---
 
+## ✨ How to Choose the Right Dark Spot Serum
 
-\---
+| **If You Have...** | **Choose...** |
+|-------------------|---------------|
+| Sun spots, general brightening | The Ordinary Alpha Arbutin |
+| Post-acne marks | Good Molecules Discoloration Serum |
+| Stubborn spots, melasma | Naturium Tranexamic Acid |
+| Sensitive skin | Good Molecules or Paula's Choice |
+| Budget under $15 | The Ordinary or Good Molecules |
 
+---
 
+## 🧠 Final Thoughts
 
-\## Shop This Article
+Dark spots take time to fade — be patient and consistent.
 
+**Your dark spot starter kit:**
+- The Ordinary Alpha Arbutin ($10)
+- Good Molecules Discoloration Serum ($12)
+- Naturium Tranexamic Acid ($20)
 
+Start with one serum. Use it daily. Never skip sunscreen. Give it 12 weeks.
 
-| \*\*Product\*\* | \*\*Price\*\* | \*\*Shop\*\* |
+> 💡 **Tip:** Always patch-test new products before applying them fully. Introduce ONE new serum at a time.
 
-|-------------|----------|---------|
+---
 
-| The Ordinary Alpha Arbutin | $9.90 | \[Shop →](affiliate-link) |
-
-| SkinCeuticals C E Ferulic | $182 | \[Shop →](affiliate-link) |
-
-| Naturium Tranexamic | $20 | \[Shop →](affiliate-link) |
-
-| Faded by Topicals | $36 | \[Shop →](affiliate-link) |
-
-| Good Molecules | $12 | \[Shop →](affiliate-link) |
-
-| Murad Rapid Dark Spot | $65 | \[Shop →](affiliate-link) |
-
-| Paula's Choice | $42 | \[Shop →](affiliate-link) |
-
-| Caudalie Vinoperfect | $79 | \[Shop →](affiliate-link) |
-
-| Urban Skin Rx | $45 | \[Shop →](affiliate-link) |
-
-| Drunk Elephant C-Firma | $78 | \[Shop →](affiliate-link) |
-
-
-
-\---
-
-
-
-\## Final Thoughts
-
-
-
-Dark spots take time to fade—be patient and consistent. The most important steps are:
-
-
-
-1\. \*\*Daily sunscreen\*\* (non-negotiable!)
-
-2\. \*\*Consistent serum use\*\* (morning and night)
-
-3\. \*\*Patience\*\* (results take months, not days)
-
-
-
-\*\*My top recommendations:\*\*
-
-\- \*\*Best overall:\*\* The Ordinary Alpha Arbutin (budget) or SkinCeuticals C E Ferulic (premium)
-
-\- \*\*Best for melasma:\*\* Naturium Tranexamic Acid
-
-\- \*\*Best for post-acne:\*\* Faded by Topicals
-
-
-
-\---
-
-
-
-\*As an Amazon Associate, I earn from qualifying purchases. All recommendations are based on dermatologist advice and honest research.\*
-
+*As an Amazon Associate, I earn from qualifying purchases. All recommendations are based on dermatologist advice and honest research.*
