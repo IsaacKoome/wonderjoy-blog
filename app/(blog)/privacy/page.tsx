@@ -98,9 +98,9 @@ export default function PrivacyPage() {
             <p className="text-gray-700">
               For questions about this privacy policy or your data, please contact us at:
               <br />
-              📧 <a href="mailto:privacy@wonderjoy.ai" className="text-pink-500 hover:underline">privacy@wonderjoy.ai</a>
+              📧 <a href="mailto:2004742@students.kcau.ac.ke" className="text-pink-500 hover:underline">privacy@wonderjoy.ai</a>
               <br />
-              🌐 <a href="https://wonderjoy-blog.vercel.app" className="text-pink-500 hover:underline">wonderjoy-blog.vercel.app</a>
+              🌐 <a href="https://wonderjoyai.com" className="text-pink-500 hover:underline">wonderjoy-blog.vercel.app</a>
             </p>
           </section>
         </div>

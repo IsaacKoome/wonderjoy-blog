@@ -116,8 +116,8 @@ export default function ContactPage() {
                   <span className="text-pink-500 text-xl">📧</span>
                   <div>
                     <p className="font-medium text-gray-800">Email</p>
-                    <a href="mailto:hello@wonderjoy.ai" className="text-gray-600 hover:text-pink-500 transition">
-                      hello@wonderjoy.ai
+                    <a href="mailto:2004742@students.kcau.ac.ke" className="text-gray-600 hover:text-pink-500 transition">
+                      2004742@students.kcau.ac.ke
                     </a>
                   </div>
                 </div>
