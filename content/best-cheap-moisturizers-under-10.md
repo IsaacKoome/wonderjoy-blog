@@ -118,11 +118,11 @@ A classic, multi-purpose moisturizer.
 
 | Product | Best For | Texture |
 |--------|--------|--------|
-| CeraVe Cream | Dry skin | Thick |
-| Hydro Boost | Oily skin | Gel |
+| Nivea Soft | General use| Creamy |
+| Amazon Basic | Dry skin | Gel |
 | Cetaphil Lotion | Sensitive skin | Light |
-| e.l.f Cream | All skin types | Medium |
-| Nivea Soft | General use | Creamy |
+| Dove Serum | All skin types | Medium |
+| Cerave | Oil skin | Thick |
 
 ---
 
@@ -144,3 +144,5 @@ Consistency matters more than price — choose what works for your skin and stic
 ---
 
 > 💡 Tip: Always apply moisturizer on slightly damp skin for better absorption.
+
+*As an Amazon Associate, I earn from qualifying purchases. All recommendations are based on dermatologist advice and honest research.*
