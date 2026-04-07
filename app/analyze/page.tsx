@@ -1,81 +1,86 @@
 "use client";
-
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { analyzeSkinFromImage } from "@/lib/skinAnalysis";
+import { analyzeSkinFromImage } from "../../lib/skinAnalysis";
 
 export default function AnalyzePage() {
   const [cameraActive, setCameraActive] = useState(false);
   const [permissionGranted, setPermissionGranted] = useState(false);
   const [analyzing, setAnalyzing] = useState(false);
-  const [results, setResults] = useState<null | {
+  const [results, setResults] = useState<{
     score: number;
     skinType: string;
     concerns: string[];
     recommendations: string[];
     products: { name: string; link: string }[];
-  }>(null);
+  } | null>(null);
   
+  // FIX: Use useRef instead of useState for DOM references
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
 
-  // Pre-load camera permission on page load
-  useEffect(() => {
-    const preloadCamera = async () => {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        streamRef.current = stream;
-        setPermissionGranted(true);
-        // Don't stop the stream immediately - keep it for later use
-      } catch (err) {
-        console.log("Camera permission denied or error:", err);
-        setPermissionGranted(false);
-      }
-    };
-    preloadCamera();
-    
-    // Cleanup on unmount
-    return () => {
-      if (streamRef.current) {
-        streamRef.current.getTracks().forEach(track => track.stop());
-      }
-    };
-  }, []);
+  // FIX 3: REMOVED preload camera completely - browsers don't like silent camera usage
+  // No more useEffect for preloading camera!
 
+  // FIX 1 & 2: Updated startCamera with onloadedmetadata and stream activity check
   const startCamera = async () => {
     try {
-      // If we already have a stream, use it
+      // FIX 2: Critical safety check - test if stream is active
       if (streamRef.current && streamRef.current.active) {
+        console.log("Stream already active, reusing...");
         if (videoRef.current) {
+          // FIX 1: Use onloadedmetadata instead of direct play()
           videoRef.current.srcObject = streamRef.current;
-          await videoRef.current.play();
-          setCameraActive(true);
+          videoRef.current.onloadedmetadata = () => {
+            videoRef.current?.play();
+            setCameraActive(true);
+            console.log("Camera started successfully!");
+            // Debug check from PDF - verify video dimensions
+            console.log("Video dimensions:", 
+              videoRef.current?.videoWidth, 
+              "x", 
+              videoRef.current?.videoHeight
+            );
+          };
         }
         return;
       }
+
+      console.log("Requesting new camera stream...");
       
-      // Otherwise request a new stream
-      const stream = await navigator.mediaDevices.getUserMedia({ 
-        video: { 
+      // Request camera ONLY when user clicks (not preloaded)
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: {
           facingMode: "user", // Front camera for selfies
           width: { ideal: 1280 },
           height: { ideal: 720 }
-        } 
+        }
       });
-      streamRef.current = stream;
       
+      streamRef.current = stream;
+      setPermissionGranted(true);
+      
+      // FIX 1: Critical - attach with onloadedmetadata to ensure frames render
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
-        // Wait for video to be ready
         videoRef.current.onloadedmetadata = () => {
           videoRef.current?.play();
           setCameraActive(true);
+          console.log("Camera started successfully!");
+          
+          // Debug: Check video dimensions (should be >0, not 0x0)
+          console.log("Video dimensions:", 
+            videoRef.current?.videoWidth, 
+            "x", 
+            videoRef.current?.videoHeight
+          );
         };
       }
     } catch (err) {
       console.error("Error starting camera:", err);
       alert("Please allow camera access to analyze your skin.");
+      setPermissionGranted(false);
     }
   };
 
@@ -95,6 +100,7 @@ export default function AnalyzePage() {
     
     console.log("Capturing photo. Video dimensions:", video.videoWidth, "x", video.videoHeight);
     
+    // FIX: Check if video dimensions are zero (not ready)
     if (canvas.width === 0 || canvas.height === 0) {
       console.error("Video dimensions are zero. Video may not be ready.");
       alert("Please wait a moment for the camera to fully load, then try again.");
@@ -139,13 +145,22 @@ export default function AnalyzePage() {
       setAnalyzing(false);
     }
   };
-
+  
   const resetAnalysis = () => {
     setResults(null);
     setCameraActive(false);
     setAnalyzing(false);
   };
 
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach(track => track.stop());
+      }
+    };
+  }, []);
+  
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-pink-50">
       <div className="max-w-4xl mx-auto px-4 py-12">
@@ -162,7 +177,7 @@ export default function AnalyzePage() {
             Take a photo of your skin and get personalized skincare recommendations based on your unique needs.
           </p>
         </div>
-
+        
         {/* Main Content */}
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
           
@@ -181,7 +196,7 @@ export default function AnalyzePage() {
               <p className="text-gray-400 text-sm mt-2">We'll ask for camera access — it's only used for analysis</p>
             </div>
           )}
-
+          
           {/* State 2: Camera Active */}
           {cameraActive && !analyzing && !results && (
             <div className="space-y-6">
@@ -191,7 +206,7 @@ export default function AnalyzePage() {
                   autoPlay
                   playsInline
                   muted
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover border-4 border-red-500" // FIX 3: Temporary red border for CSS debugging
                   style={{ transform: 'scaleX(-1)' }} // Mirror selfie view
                 />
                 <canvas ref={canvasRef} className="hidden" />
@@ -211,23 +226,22 @@ export default function AnalyzePage() {
                     }
                     setCameraActive(false);
                   }}
-                  className="px-8 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold rounded-full transition"
+                  className="px-8 py-3 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-full transition"
                 >
                   Cancel
                 </button>
               </div>
             </div>
           )}
-
+          
           {/* State 3: Analyzing */}
           {analyzing && (
             <div className="text-center py-12">
-              <div className="inline-block w-16 h-16 border-4 border-pink-200 border-t-pink-500 rounded-full animate-spin"></div>
-              <p className="text-gray-600 mt-6">Analyzing your skin...</p>
-              <p className="text-gray-400 text-sm mt-2">This will only take a few seconds</p>
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-pink-500 border-t-transparent"></div>
+              <p className="text-gray-600 mt-4">Analyzing your skin...</p>
             </div>
           )}
-
+          
           {/* State 4: Results */}
           {results && !analyzing && !cameraActive && (
             <div className="space-y-8">
@@ -239,11 +253,13 @@ export default function AnalyzePage() {
                     <div className="text-sm text-gray-500">Skin Score</div>
                   </div>
                 </div>
-                <p className="text-gray-600 mt-4">
-                  Your skin appears to be <strong>{results.skinType}</strong> with {results.concerns.length} areas to focus on.
-                </p>
+                <div>
+                  <p className="text-gray-600 mt-4">
+                    Your skin appears to be <strong>{results.skinType}</strong> with {results.concerns.length} areas to focus on.
+                  </p>
+                </div>
               </div>
-
+              
               {/* Concerns */}
               {results.concerns.length > 0 && (
                 <div className="bg-pink-50 rounded-xl p-6">
@@ -258,7 +274,7 @@ export default function AnalyzePage() {
                   </ul>
                 </div>
               )}
-
+              
               {/* Recommendations */}
               {results.recommendations.length > 0 && (
                 <div className="bg-white border border-pink-100 rounded-xl p-6">
@@ -273,7 +289,7 @@ export default function AnalyzePage() {
                   </ul>
                 </div>
               )}
-
+              
               {/* Products */}
               {results.products.length > 0 && (
                 <div>
@@ -294,7 +310,7 @@ export default function AnalyzePage() {
                   </div>
                 </div>
               )}
-
+              
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button
@@ -310,14 +326,13 @@ export default function AnalyzePage() {
                   Read More Articles
                 </Link>
               </div>
-
+              
               {/* Disclaimer */}
               <p className="text-xs text-gray-400 text-center pt-4">
                 This analysis is for educational purposes. For serious skin concerns, consult a dermatologist.
               </p>
             </div>
           )}
-
         </div>
       </div>
     </main>
