@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { analyzeSkinFromImage } from '@/lib/skinAnalysis';
+import { analyzeSkinFromImage } from "@/lib/skinAnalysis";
 
 export default function AnalyzePage() {
   const [cameraActive, setCameraActive] = useState(false);
@@ -25,91 +25,120 @@ export default function AnalyzePage() {
     const preloadCamera = async () => {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        // Permission granted! Store it and stop immediately
         streamRef.current = stream;
         setPermissionGranted(true);
-        stream.getTracks().forEach(track => track.stop());
-        streamRef.current = null;
+        // Don't stop the stream immediately - keep it for later use
       } catch (err) {
-        console.log("Camera permission denied or error");
+        console.log("Camera permission denied or error:", err);
         setPermissionGranted(false);
       }
     };
     preloadCamera();
+    
+    // Cleanup on unmount
+    return () => {
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach(track => track.stop());
+      }
+    };
   }, []);
 
   const startCamera = async () => {
     try {
-      if (streamRef.current) {
-        streamRef.current.getTracks().forEach(track => track.stop());
+      // If we already have a stream, use it
+      if (streamRef.current && streamRef.current.active) {
+        if (videoRef.current) {
+          videoRef.current.srcObject = streamRef.current;
+          await videoRef.current.play();
+          setCameraActive(true);
+        }
+        return;
       }
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      
+      // Otherwise request a new stream
+      const stream = await navigator.mediaDevices.getUserMedia({ 
+        video: { 
+          facingMode: "user", // Front camera for selfies
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        } 
+      });
       streamRef.current = stream;
+      
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
-        videoRef.current.play();
+        // Wait for video to be ready
+        videoRef.current.onloadedmetadata = () => {
+          videoRef.current?.play();
+          setCameraActive(true);
+        };
       }
-      setCameraActive(true);
     } catch (err) {
       console.error("Error starting camera:", err);
       alert("Please allow camera access to analyze your skin.");
     }
   };
 
-  
-  // In capturePhoto function, replace the setTimeout mock with this:
-
-const capturePhoto = async () => {
-  if (!videoRef.current || !canvasRef.current) return;
-  
-  const video = videoRef.current;
-  const canvas = canvasRef.current;
-  const context = canvas.getContext("2d");
-  
-  canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight;
-  context?.drawImage(video, 0, 0, canvas.width, canvas.height);
-  
-  // Stop camera stream
-  if (streamRef.current) {
-    streamRef.current.getTracks().forEach(track => track.stop());
-    streamRef.current = null;
-  }
-  setCameraActive(false);
-  
-  // Start analysis
-  setAnalyzing(true);
-  
-  try {
-    // Import the analysis function dynamically
-    const { analyzeSkinFromImage } = await import('@/lib/skinAnalysis');
+  const capturePhoto = async () => {
+    if (!videoRef.current || !canvasRef.current) {
+      console.error("Video or canvas ref missing");
+      return;
+    }
     
-    // Create an image element from the canvas
-    const imageElement = new Image();
-    imageElement.src = canvas.toDataURL();
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
     
-    // Wait for image to load
-    await new Promise((resolve) => {
-      imageElement.onload = resolve;
-    });
+    // Set canvas dimensions to match video
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
     
-    // Run the analysis
-    const analysisResults = await analyzeSkinFromImage(imageElement);
-    setResults(analysisResults);
-  } catch (error) {
-    console.error("Analysis failed:", error);
-    // Fallback to default results
-    setResults({
-      score: 75,
-      skinType: "Normal",
-      concerns: ["Analysis couldn't complete. Please try again with better lighting."],
-      recommendations: ["Make sure your face is well-lit and try again"],
-      products: [],
-    });
-  } finally {
-    setAnalyzing(false);
-  }
-};
+    console.log("Capturing photo. Video dimensions:", video.videoWidth, "x", video.videoHeight);
+    
+    if (canvas.width === 0 || canvas.height === 0) {
+      console.error("Video dimensions are zero. Video may not be ready.");
+      alert("Please wait a moment for the camera to fully load, then try again.");
+      return;
+    }
+    
+    context?.drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+    // Stop camera stream
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach(track => track.stop());
+      streamRef.current = null;
+    }
+    setCameraActive(false);
+    
+    // Start analysis
+    setAnalyzing(true);
+    
+    try {
+      // Create an image element from the canvas
+      const imageElement = new Image();
+      imageElement.src = canvas.toDataURL();
+      
+      // Wait for image to load
+      await new Promise((resolve) => {
+        imageElement.onload = resolve;
+      });
+      
+      // Run the analysis
+      const analysisResults = await analyzeSkinFromImage(imageElement);
+      setResults(analysisResults);
+    } catch (error) {
+      console.error("Analysis failed:", error);
+      setResults({
+        score: 75,
+        skinType: "Normal",
+        concerns: ["Analysis couldn't complete. Please try again with better lighting."],
+        recommendations: ["Make sure your face is well-lit and try again"],
+        products: [],
+      });
+    } finally {
+      setAnalyzing(false);
+    }
+  };
 
   const resetAnalysis = () => {
     setResults(null);
@@ -163,6 +192,7 @@ const capturePhoto = async () => {
                   playsInline
                   muted
                   className="w-full h-full object-cover"
+                  style={{ transform: 'scaleX(-1)' }} // Mirror selfie view
                 />
                 <canvas ref={canvasRef} className="hidden" />
               </div>
@@ -215,49 +245,55 @@ const capturePhoto = async () => {
               </div>
 
               {/* Concerns */}
-              <div className="bg-pink-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">🔍 What We Found</h3>
-                <ul className="space-y-2">
-                  {results.concerns.map((concern, i) => (
-                    <li key={i} className="text-gray-600 flex items-start gap-2">
-                      <span className="text-pink-500">•</span>
-                      {concern}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {results.concerns.length > 0 && (
+                <div className="bg-pink-50 rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">🔍 What We Found</h3>
+                  <ul className="space-y-2">
+                    {results.concerns.map((concern, i) => (
+                      <li key={i} className="text-gray-600 flex items-start gap-2">
+                        <span className="text-pink-500">•</span>
+                        {concern}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Recommendations */}
-              <div className="bg-white border border-pink-100 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">✨ Our Recommendations</h3>
-                <ul className="space-y-2">
-                  {results.recommendations.map((rec, i) => (
-                    <li key={i} className="text-gray-600 flex items-start gap-2">
-                      <span className="text-green-500">✓</span>
-                      {rec}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {results.recommendations.length > 0 && (
+                <div className="bg-white border border-pink-100 rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">✨ Our Recommendations</h3>
+                  <ul className="space-y-2">
+                    {results.recommendations.map((rec, i) => (
+                      <li key={i} className="text-gray-600 flex items-start gap-2">
+                        <span className="text-green-500">✓</span>
+                        {rec}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Products */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">🛒 Products We Recommend</h3>
-                <div className="space-y-3">
-                  {results.products.map((product, i) => (
-                    <a
-                      key={i}
-                      href={product.link}
-                      target="_blank"
-                      rel="nofollow"
-                      className="block bg-gray-50 hover:bg-gray-100 rounded-xl p-4 transition flex justify-between items-center"
-                    >
-                      <span className="font-medium text-gray-800">{product.name}</span>
-                      <span className="text-pink-500 text-sm">Shop on Amazon →</span>
-                    </a>
-                  ))}
+              {results.products.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">🛒 Products We Recommend</h3>
+                  <div className="space-y-3">
+                    {results.products.map((product, i) => (
+                      <a
+                        key={i}
+                        href={product.link}
+                        target="_blank"
+                        rel="nofollow"
+                        className="block bg-gray-50 hover:bg-gray-100 rounded-xl p-4 transition flex justify-between items-center"
+                      >
+                        <span className="font-medium text-gray-800">{product.name}</span>
+                        <span className="text-pink-500 text-sm">Shop on Amazon →</span>
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
