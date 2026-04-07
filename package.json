@@ -12,6 +12,8 @@
   "dependencies": {
     "@next/third-parties": "^16.2.2",
     "@tailwindcss/typography": "^0.5.19",
+    "@tensorflow-models/face-detection": "^1.0.3",
+    "@tensorflow/tfjs": "^4.22.0",
     "gray-matter": "^4.0.3",
     "next": "16.2.1",
     "next-sitemap": "^4.2.3",

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { analyzeSkinFromImage } from '@/lib/skinAnalysis';
 
 export default function AnalyzePage() {
   const [cameraActive, setCameraActive] = useState(false);
@@ -55,48 +56,60 @@ export default function AnalyzePage() {
     }
   };
 
-  const capturePhoto = async () => {
-    if (!videoRef.current || !canvasRef.current) return;
+  
+  // In capturePhoto function, replace the setTimeout mock with this:
+
+const capturePhoto = async () => {
+  if (!videoRef.current || !canvasRef.current) return;
+  
+  const video = videoRef.current;
+  const canvas = canvasRef.current;
+  const context = canvas.getContext("2d");
+  
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  context?.drawImage(video, 0, 0, canvas.width, canvas.height);
+  
+  // Stop camera stream
+  if (streamRef.current) {
+    streamRef.current.getTracks().forEach(track => track.stop());
+    streamRef.current = null;
+  }
+  setCameraActive(false);
+  
+  // Start analysis
+  setAnalyzing(true);
+  
+  try {
+    // Import the analysis function dynamically
+    const { analyzeSkinFromImage } = await import('@/lib/skinAnalysis');
     
-    const video = videoRef.current;
-    const canvas = canvasRef.current;
-    const context = canvas.getContext("2d");
+    // Create an image element from the canvas
+    const imageElement = new Image();
+    imageElement.src = canvas.toDataURL();
     
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    context?.drawImage(video, 0, 0, canvas.width, canvas.height);
+    // Wait for image to load
+    await new Promise((resolve) => {
+      imageElement.onload = resolve;
+    });
     
-    // Stop camera stream
-    if (streamRef.current) {
-      streamRef.current.getTracks().forEach(track => track.stop());
-      streamRef.current = null;
-    }
-    setCameraActive(false);
-    
-    // Start analysis
-    setAnalyzing(true);
-    
-    // Simulate AI analysis (replace with real AI later)
-    setTimeout(() => {
-      const mockResults = {
-        score: 78,
-        skinType: "Combination",
-        concerns: ["Slight redness around cheeks", "Minor uneven texture"],
-        recommendations: [
-          "Use a gentle, fragrance-free cleanser",
-          "Add niacinamide to your morning routine",
-          "Apply sunscreen daily (you're doing great with this!)",
-        ],
-        products: [
-          { name: "CeraVe Hydrating Cleanser", link: "https://amazon.com/dp/B01MSSDEPK/?tag=wonderjoyai20-20" },
-          { name: "The Ordinary Niacinamide 10% + Zinc", link: "https://amazon.com/dp/B01M1AJ6N2/?tag=wonderjoyai20-20" },
-          { name: "Black Girl Sunscreen SPF 30", link: "https://amazon.com/dp/B0CV9R8DTK/?tag=wonderjoyai20-20" },
-        ],
-      };
-      setResults(mockResults);
-      setAnalyzing(false);
-    }, 2000);
-  };
+    // Run the analysis
+    const analysisResults = await analyzeSkinFromImage(imageElement);
+    setResults(analysisResults);
+  } catch (error) {
+    console.error("Analysis failed:", error);
+    // Fallback to default results
+    setResults({
+      score: 75,
+      skinType: "Normal",
+      concerns: ["Analysis couldn't complete. Please try again with better lighting."],
+      recommendations: ["Make sure your face is well-lit and try again"],
+      products: [],
+    });
+  } finally {
+    setAnalyzing(false);
+  }
+};
 
   const resetAnalysis = () => {
     setResults(null);

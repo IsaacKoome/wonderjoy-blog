@@ -38,7 +38,6 @@ export default function RootLayout({
               <Link href="/" className="text-gray-600 hover:text-pink-600 transition">
                 Home
               </Link>
-              // In the nav section, add this link next to "Articles"
               <Link href="/analyze" className="text-gray-600 hover:text-pink-600 transition">
                   Analyze
               </Link>
