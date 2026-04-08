@@ -1,7 +1,8 @@
 "use client";
+
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { analyzeSkinFromImage } from "../../lib/skinAnalysis";
+import { analyzeSkinFromImage } from "@/lib/skinAnalysis";
 
 export default function AnalyzePage() {
   const [cameraActive, setCameraActive] = useState(false);
@@ -26,27 +27,22 @@ export default function AnalyzePage() {
   // FIX 1 & 2: Updated startCamera with onloadedmetadata and stream activity check
   const startCamera = async () => {
     try {
-      // FIX 2: Critical safety check - test if stream is active
-      if (streamRef.current && streamRef.current.active) {
-        console.log("Stream already active, reusing...");
-        if (videoRef.current) {
-          // FIX 1: Use onloadedmetadata instead of direct play()
-          videoRef.current.srcObject = streamRef.current;
-          videoRef.current.onloadedmetadata = () => {
-            videoRef.current?.play();
-            setCameraActive(true);
-            console.log("Camera started successfully!");
-            // Debug check from PDF - verify video dimensions
-            console.log("Video dimensions:", 
-              videoRef.current?.videoWidth, 
-              "x", 
-              videoRef.current?.videoHeight
-            );
-          };
-        }
-        return;
+      console.log("startCamera called - current stream state:", {
+        hasStream: !!streamRef.current,
+        isActive: streamRef.current?.active
+      });
+      
+      // Clean up any existing stream first to avoid weird states
+      if (streamRef.current) {
+        console.log("Cleaning up existing stream...");
+        streamRef.current.getTracks().forEach(track => track.stop());
+        streamRef.current = null;
       }
-
+      
+      if (videoRef.current) {
+        videoRef.current.srcObject = null;
+      }
+      
       console.log("Requesting new camera stream...");
       
       // Request camera ONLY when user clicks (not preloaded)
@@ -58,23 +54,36 @@ export default function AnalyzePage() {
         }
       });
       
+      console.log("Stream obtained successfully:", stream.active);
       streamRef.current = stream;
       setPermissionGranted(true);
       
       // FIX 1: Critical - attach with onloadedmetadata to ensure frames render
       if (videoRef.current) {
+        console.log("Setting video srcObject...");
         videoRef.current.srcObject = stream;
+        
         videoRef.current.onloadedmetadata = () => {
-          videoRef.current?.play();
-          setCameraActive(true);
-          console.log("Camera started successfully!");
-          
-          // Debug: Check video dimensions (should be >0, not 0x0)
-          console.log("Video dimensions:", 
+          console.log("Video metadata loaded, dimensions:", 
             videoRef.current?.videoWidth, 
             "x", 
             videoRef.current?.videoHeight
           );
+          
+          if (videoRef.current) {
+            videoRef.current.play()
+              .then(() => {
+                console.log("Video playing successfully");
+                setCameraActive(true);
+              })
+              .catch(err => {
+                console.error("Video play failed:", err);
+              });
+          }
+        };
+        
+        videoRef.current.onerror = (err) => {
+          console.error("Video element error:", err);
         };
       }
     } catch (err) {
@@ -151,12 +160,20 @@ export default function AnalyzePage() {
     setCameraActive(false);
     setAnalyzing(false);
   };
-
+  
   // Cleanup on unmount
   useEffect(() => {
     return () => {
+      console.log("Cleaning up camera resources...");
       if (streamRef.current) {
-        streamRef.current.getTracks().forEach(track => track.stop());
+        streamRef.current.getTracks().forEach(track => {
+          track.stop();
+          console.log("Track stopped:", track.kind);
+        });
+        streamRef.current = null;
+      }
+      if (videoRef.current) {
+        videoRef.current.srcObject = null;
       }
     };
   }, []);
@@ -206,7 +223,7 @@ export default function AnalyzePage() {
                   autoPlay
                   playsInline
                   muted
-                  className="w-full h-full object-cover border-4 border-red-500" // FIX 3: Temporary red border for CSS debugging
+                  className="w-full h-full object-cover border-4 border-red-500" // FIX: Temporary red border for CSS debugging
                   style={{ transform: 'scaleX(-1)' }} // Mirror selfie view
                 />
                 <canvas ref={canvasRef} className="hidden" />
