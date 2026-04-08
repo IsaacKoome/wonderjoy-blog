@@ -63,7 +63,7 @@ Vitamin C is a powerful antioxidant that protects your skin from environmental d
             display: inline-block;">
     🔥 Limited offer on Amazon (Unbeatable Price)
   </a>
-  👉 Prices may change — check latest deal on Amazon
+  👈 Prices may change — check latest deal today
 </div>
 
 
