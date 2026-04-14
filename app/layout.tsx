@@ -43,7 +43,7 @@ export default function RootLayout({
             </Link>
             <div className="space-x-6">
               <Link href="/" className="text-gray-600 hover:text-pink-600 transition">
-                Home
+                Koome
               </Link>
               <Link href="/articles" className="text-gray-600 hover:text-pink-600 transition">
                 Articles
