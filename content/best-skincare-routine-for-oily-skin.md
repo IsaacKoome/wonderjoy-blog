@@ -69,3 +69,13 @@ Managing oily skin is about balance—not removing all oil.
 > 💡 Tip: Hydrated skin produces less oil.
 
 *As an Amazon Associate, I earn from qualifying purchases. All recommendations are based on dermatologist advice and honest research.*
+
+---
+
+## 🔗 Related Articles
+
+- [Best Natural Skincare Products](https://wonderjoyai.com/articles/best-natural-skincare-products)
+- [Best Sunscreens for Glowing Skin](https://wonderjoyai.com/articles/best-sunscreens-glowing-skin)
+- [Top 5 Cleansers for Acne](https://wonderjoyai.com/articles/top-5-cleansers-acne)
+
+---

@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { getAllArticles, getArticleBySlug } from '@/lib/articles';
 
+// ✅ THIS PART GENERATES STATIC PATHS
 export async function generateStaticParams() {
   const articles = getAllArticles();
   return articles.map((article) => ({
@@ -11,12 +12,25 @@ export async function generateStaticParams() {
   }));
 }
 
+// ✅ ⭐ THIS IS WHAT YOU WERE MISSING (CRITICAL)
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const url = `https://wonderjoyai.com/articles/${params.slug}`;
+
+  return {
+    title: params.slug,
+    alternates: {
+      canonical: url,
+    },
+  };
+}
+
+// ✅ MAIN PAGE
 export default async function ArticlePage({ 
   params 
 }: { 
-  params: Promise<{ slug: string }> 
+  params: { slug: string } 
 }) {
-  const { slug } = await params;
+  const { slug } = params;
   const article = getArticleBySlug(slug);
   
   if (!article) {
