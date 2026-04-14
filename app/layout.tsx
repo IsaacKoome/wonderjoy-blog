@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import Canonical from './components/canonical';
+import Canonical from './components/Canonical';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Canonical />
+    
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1335773994240018"
@@ -43,7 +43,7 @@ export default function RootLayout({
             </Link>
             <div className="space-x-6">
               <Link href="/" className="text-gray-600 hover:text-pink-600 transition">
-                Koome
+                Home
               </Link>
               <Link href="/articles" className="text-gray-600 hover:text-pink-600 transition">
                 Articles
