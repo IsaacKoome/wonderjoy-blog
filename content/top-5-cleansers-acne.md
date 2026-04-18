@@ -32,7 +32,7 @@ Avoid harsh cleansers that strip your skin—they can make acne worse.
 This is one of the most effective types for acne-prone skin. It penetrates deep into pores and helps remove excess oil and dead skin cells.
 
 <div style="margin: 20px 0;">
-  <a href="https://www.amazon.com/CeraVe-Treatment-Salicylic-Purifying-Comedogenic/dp/B0C7JJG6BB?crid=3UZE9J6AL3MQ3&dib=eyJ2IjoiMSJ9.FPfZ23ALAfm_y5Nk5LDOGay_tJ7hmEhrWR43-pVxEV9RDIMtLFWjDB9PXw1euri2ju0IubWJCzkN9HvXa94lv-JIkhHSgjyE4vbzWst9z_BX5NAJ8uu-5-1Kfb8VdwDEi3KeXwLTpdR1TMvFoPzjcN3x0RArlYMuOkBH8H5gpMdWu7NgPQBegv_eQ28F1N0OWu2gGBRI1WEcmDlpEm4L5131gkIv9uLxPI7S4QVn8Jlr5mjOBnFONCGi85PsMo4KnKHjleeSsRLEqxg_0iO6MtzCxo8OWd3nYIx1_LG7jvQ.dTDT2pHdXodQxBO1Vqqs2-dolJB0yOUYR0ObsnOZORw&dib_tag=se&keywords=Salicylic%2BAcid%2BCleanser&qid=1775292218&sprefix=salicylic%2Bacid%2Bcleanser%2Caps%2C877&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=eb626870777d62dce5568199507dbec7&language=en_US&ref_=as_li_ss_tl" target="_blank" 
+  <a href="https://www.amazon.com/Paulas-Choice-SKIN-PERFECTING-Exfoliant-Facial-Lines-1-1oz/dp/B07C5SS6YD?crid=2PY57NBX8UDOZ&dib=eyJ2IjoiMSJ9.TQ52bBsemDg53le7WMFkGhrUS79XX5Bdxh2dcGkeaaLTdHitYIebRHwAErhgt5iSdLXGdRoFQHr8QdWGMYP9Rk6-SNc2KwcMuikX8ZL-Ge19i8c2sr4SaTl3kn7lPam7Suc7vYbQd0mW2OuapseuW9S8D2VRNAJ2vDNFi8kT9DFFAn8foE6w9hrA_vQPMHe--LI795aOCX3Ys3TbQqA6NZ8WHedRQjmvrhV46140Ebimmb66p7I_EYR--RaShjjPp20y_rcuAL1dzOIZOHay5qHqLECY1Km4C7c_MbmPYk4.PZqrX_gUf_Argg8gyhcaZMoXereA0yr5WBDI6J1YY1I&dib_tag=se&keywords=Salicylic%2BAcid&qid=1776505848&sprefix=salicylic%2Bacid%2Caps%2C446&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=03b8ffb258682e279b691424e16f59e7&language=en_US&ref_=as_li_ss_tl" target="_blank" 
      style="background: linear-gradient(135deg, #4facfe, #00c6ff); 
             color: white; 
             padding: 12px 20px; 
@@ -40,7 +40,7 @@ This is one of the most effective types for acne-prone skin. It penetrates deep 
             text-decoration: none; 
             font-weight: 600;
             display: inline-block;">
-    🧼 Check Salicylic Cleanser
+    🧼 Paula's Choice Salicylic Cleanser only %15
   </a>
 </div>
 
@@ -57,7 +57,7 @@ Perfect for moderate acne, this cleanser helps eliminate acne-causing bacteria a
 Ideal for sensitive acne-prone skin. Cleans without irritation or dryness.
 
 <div style="margin: 20px 0;">
-  <a href="https://www.amazon.com/COSRX-Good-Morning-Cleanser-150ml/dp/B016NRXO06?crid=2WM8MCPS4X16Y&dib=eyJ2IjoiMSJ9.fBgwmi8b60Vt_4jK_3CIPjAA8mZf1O8ogAt7yjgA7lj-pBp8yuzpX24iwCtwmtk6tITWrLV7i6XXshPN57za-kHI8BzH4jwN-w72gn-xwlGM6oYNB_gtox0iiWnGZLHRst8KQrcfxrUTECRlw9VnCKig-i1MKl5Vs3Gy7CgJ79TYMfiHUaqQ2Csaa_goeG9QBYEm8DXPOfEmCtaZ2Aow4W0gsHIdfcKy43bnPAogJqfssWC7wGvTTZ5knEMPwBgcsFhn47C7qnl-iL55o2yF9eJPaabYngBH9wLq8t5ATjs.-dVHREx0jfA3nSkRKsdYCFrockbe5QX3HuAvZVPU2BM&dib_tag=se&keywords=Gentle%2BFoaming%2BCleanser&qid=1775292284&sprefix=gentle%2Bfoaming%2Bcleanser%2Caps%2C1011&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&smid=A2E3ILYZ70ZIBL&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=93a32515779eb9dbee236f058c7f6fc9&language=en_US&ref_=as_li_ss_tl" target="_blank" 
+  <a href="https://www.amazon.com/Benzoyl-Peroxide-Acne-Treatment-Wash/dp/B00PO7GKLM?crid=1TWRERRV5SXQK&dib=eyJ2IjoiMSJ9.eltLp0isz8ekEwyHrrdA5jARQBfaSl8jGs21W_1zlHlgEeS0sKxcqoYxXp4gXVaZaqferiyuo7mMX_g1XbwkFboHGORzrXM3gWzZJFm922QhzxQoLhdTT1c4T3lc9uDnMgFz5loMAW_OsAwRlzH-H6f6XruWTQbJjnFrEMLKhU6aTCb-qYuKMC6g0d1k8Q5GWhIAFYG4hXB3WhzNoRH9_3Yb4Qu8a2dJ_Cz_4vwW8HRUucK80MyZDfG8lcD9a5lnZKbScEnLB3r0_SRoQbyqPBgy887e4SlqHu7BOJddQSU.nQM_RNpa_QNOHZwUYr6jhq1fguLayCS8wDUBC5Eveq0&dib_tag=se&keywords=benzoyl%2Bperoxide%2Bface%2Bwash&qid=1776505680&sprefix=Benzo%2Caps%2C682&sr=8-1&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=3be31e4b05fe06eca38a1587b941db29&language=en_US&ref_=as_li_ss_tl" target="_blank" 
      style="background: linear-gradient(135deg, #36d1dc, #5b86e5); 
             color: white; 
             padding: 12px 20px; 
@@ -65,7 +65,7 @@ Ideal for sensitive acne-prone skin. Cleans without irritation or dryness.
             text-decoration: none; 
             font-weight: 600;
             display: inline-block;">
-    🌿 View Gentle Cleanser
+    🌿 Benzoyl Peroxide Acne fash wash on Amazon
   </a>
 </div>
 
@@ -94,7 +94,7 @@ Balances oil control with hydration—perfect for preventing dryness while treat
             text-decoration: none; 
             font-weight: 600;
             display: inline-block;">
-    💧 Check Hydrating Cleanser
+    💧 Botanic Tea Tree Body Wash only %13.99
   </a>
 </div>
 
