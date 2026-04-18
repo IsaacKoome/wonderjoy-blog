@@ -6,7 +6,7 @@ excerpt: "Not all ingredients are created equal. Here's what to skip and why, ac
 
 # 10 Skincare Ingredients Dermatologists Want You to Avoid
 
-![Skincare ingredients to avoid - harmful chemicals labeled on product bottles](/images/skincare-ingredients.jpg)
+![Skincare ingredients to avoid - many skincare products lying on a surface](/images/many-skincare-products.jpg)
 
 Not all skincare ingredients are created equal. Some popular ingredients can actually harm your skin over time — causing irritation, breakouts, and even long-term damage.
 
@@ -16,7 +16,7 @@ Here are 10 ingredients dermatologists recommend avoiding.
 
 ## 🚫 The Top 3 Ingredients to Avoid
 
-![Labels showing "fragrance-free" and "paraben-free" on skincare products](/images/avoid-ingredients-products.jpg)
+
 
 These three are the most common offenders. Start by removing them from your routine.
 
@@ -39,7 +39,7 @@ These three are the most common offenders. Start by removing them from your rout
             text-decoration: none; 
             font-weight: 600;
             display: inline-block;">
-    🧴 Shop Fragrance-Free Cleanser
+    🧴 Shop Fragrance-Free Cleanser $16.97
   </a>
 </div>
 
@@ -110,7 +110,7 @@ These three are the most common offenders. Start by removing them from your rout
             text-decoration: none; 
             font-weight: 600;
             display: inline-block;">
-    ☀️ Shop Mineral Sunscreen
+    ☀️ Shop Mineral Sunscreen $15.99 on Amazon
   </a>
 </div>
 

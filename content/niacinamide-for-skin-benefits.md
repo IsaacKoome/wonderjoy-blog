@@ -64,7 +64,7 @@ A good niacinamide serum should be lightweight, non-irritating, and easy to laye
             text-decoration: none; 
             font-weight: 600;
             display: inline-block;">
-    🧪 Check Niacinamide Serum 
+    🧪 Check Niacinamide Serum only $13.97
   </a>
 </div>
 

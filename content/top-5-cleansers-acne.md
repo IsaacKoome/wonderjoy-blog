@@ -40,7 +40,7 @@ This is one of the most effective types for acne-prone skin. It penetrates deep 
             text-decoration: none; 
             font-weight: 600;
             display: inline-block;">
-    🧼 Paula's Choice Salicylic Cleanser only %15
+    🧼 Paula's Choice Salicylic Cleanser only $15
   </a>
 </div>
 

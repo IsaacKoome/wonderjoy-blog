@@ -18,7 +18,6 @@ In this guide, I'll show you exactly how to harness the power of hyaluronic acid
 
 ## What Is Hyaluronic Acid?
 
-![Hyaluronic acid molecule structure](/images/hyaluronic-molecule.jpg)
 
 Hyaluronic acid (HA) is a substance that your body produces naturally. It's found in your skin, joints, and eyes. Its primary job is to retain water to keep your tissues well-lubricated and moist.
 
@@ -36,7 +35,6 @@ Hyaluronic acid (HA) is a substance that your body produces naturally. It's foun
 
 ## Step 1: Apply to DAMP Skin (This Is Critical)
 
-![Applying hyaluronic acid serum to damp face](/images/hyaluronic-application.jpg)
 
 **The #1 mistake people make:** Applying hyaluronic acid to dry skin.
 
@@ -59,7 +57,6 @@ Here's why this backfires: Hyaluronic acid is a humectant—it draws water from 
 
 ## Step 2: Layer with Moisturizer (Don't Skip This)
 
-![Applying moisturizer over serum](/images/hyaluronic-moisturizer.jpg)
 
 Hyaluronic acid needs to be **sealed in**. Without a moisturizer on top, the water HA attracts can evaporate from your skin's surface, leaving you drier than before.
 
@@ -89,7 +86,6 @@ Hyaluronic acid needs to be **sealed in**. Without a moisturizer on top, the wat
 
 ## Step 3: Choose the Right HA Product for Your Budget
 
-![Three hyaluronic acid serums from different price tiers](/images/hyaluronic-products.jpg)
 
 Hyaluronic acid comes in different molecular weights, which affect how deeply it penetrates. Here are the best options at every price point.
 
@@ -120,7 +116,6 @@ Hyaluronic acid comes in different molecular weights, which affect how deeply it
 
 ## Step 4: Know When NOT to Use Hyaluronic Acid
 
-![Dry desert climate warning](/images/hyaluronic-warning.jpg)
 
 Here's something most articles won't tell you: **In very dry climates, hyaluronic acid can actually dehydrate your skin.**
 

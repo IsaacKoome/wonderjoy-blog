@@ -16,7 +16,6 @@ A good night routine supports this natural process. Here's a simple 4-step routi
 
 ## Step 1: Double Cleanse
 
-![Oil cleanser and gel cleanser together](/images/double-cleanse.jpg)
 
 One wash isn't enough at night. You need to remove sunscreen, oil, and dirt from the day.
 
