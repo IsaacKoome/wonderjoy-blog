@@ -16,7 +16,7 @@ Here's the truth: **oily skin still needs hydration**—just the right kind.
 
 ## The 3 Products That Actually Work for Oily Skin
 
-![CeraVe Foaming Cleanser, The Ordinary Niacinamide, and Neutrogena Hydro Boost](/images/oily-skin-products.jpg)
+
 
 You don't need 10 products. You need these 3.
 
@@ -50,7 +50,8 @@ class="amazon-btn" target="blank" rel="nofollow">Shop Ordinary Niacinamide on Am
 
 ### 3. Moisturizer: Neutrogena Hydro Boost Water Gel
 
-**Price:** $19.99
+![Neutrogena Hydro Boost Gel Cream Image](/images/neutrogena-hydro.jpg)
+**Price:** $20.99
 
 This oil-free gel moisturizer uses hyaluronic acid to hydrate without clogging pores. It absorbs instantly, leaving zero greasy residue.
 

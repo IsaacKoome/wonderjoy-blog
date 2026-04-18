@@ -4,7 +4,7 @@ date: "2026-04-11"
 excerpt: "A straightforward skincare routine for teenagers dealing with acne, oiliness, or just starting out. No complicated steps, just what works."
 ---
 
-![Teen Skincare Routine](/images/teens_skincare.jpg)
+![Images of 3 teens together doing skincare routine](/images/teens_skincare.jpg)
 
 Starting skincare as a teen can feel confusing. There are so many products, trends, and conflicting advice online.
 

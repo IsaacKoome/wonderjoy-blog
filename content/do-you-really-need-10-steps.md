@@ -55,7 +55,7 @@ A simple routine works best:
 
 ---
 
-![Minimal Routine](https://images.unsplash.com/photo-1556228720-195a672e8a03)
+![Cerave Cleanser Image Prodct Displayed](/images/cerave-cleanser.jpg)
 
 ---
 

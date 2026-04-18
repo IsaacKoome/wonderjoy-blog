@@ -6,7 +6,7 @@ excerpt: "New to skincare? Start here. Just 4 products. 5 minutes a day. No comp
 
 # Top Skincare Products for Beginners: Your Complete Starter Kit
 
-![Beginner skincare products laid out on a clean surface](/images/beginners-header.jpg)
+![Many Different skincare products laid on a surface](/images/many-skincare-products.jpg)
 
 Starting skincare can feel overwhelming. Thousands of products. Conflicting advice. Where do you even begin?
 

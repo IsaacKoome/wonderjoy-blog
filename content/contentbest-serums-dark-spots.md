@@ -29,7 +29,6 @@ Here are the best dark spot serums that actually work.
 
 ## ✨ The 3 Best Serums for Dark Spots
 
-![The Ordinary Alpha Arbutin, Good Molecules Discoloration Serum, and Naturium Tranexamic Acid](/images/dark-spot-serums-products.jpg)
 
 You don't need 10 serums. You need the right one for your skin.
 
