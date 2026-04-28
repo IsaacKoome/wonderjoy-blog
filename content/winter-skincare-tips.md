@@ -117,3 +117,13 @@ class="amazon-btn" target="blank" rel="nofollow">Most essential item -></a>
 ---
 
 *As an Amazon Associate, I earn from qualifying purchases. All recommendations are based on dermatologist advice and honest research.*
+
+---
+
+## 🔗 Related Articles
+
+- [Best Sunscreens for Glowing Skin](https://wonderjoyai.com/articles/best-sunscreens-glowing-skin)
+- [Top 5 Cleansers for Acne](https://wonderjoyai.com/articles/top-5-cleansers-acne)
+- [Perfect Daily Skincare Routine](https://wonderjoyai.com/articles/first-skincare-routine)
+
+---
