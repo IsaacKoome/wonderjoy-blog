@@ -184,7 +184,7 @@ Focus on **gentle care, hydration, and consistency**, and your skin will recover
 
 ---
 
-## 🔗 Related Articles
+## 🔗 Other Articles You Might Like
 
 - [Best Sunscreens for Glowing Skin](https://wonderjoyai.com/articles/best-sunscreens-glowing-skin)
 - [Top 5 Cleansers for Acne](https://wonderjoyai.com/articles/top-5-cleansers-acne)
