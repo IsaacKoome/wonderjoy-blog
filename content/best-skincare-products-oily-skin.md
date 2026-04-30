@@ -107,9 +107,6 @@ Oily skin isn't a curse. It actually **ages slower** than dry skin. The key is w
 
 **Total: $44** for a complete routine that works.
 
-👉 [**Shop the Complete Oily Skin Routine on Amazon →**](https://www.amazon.com?&linkCode=ll2&tag=wonderjoyai20-20&linkId=392a55ad48f2917c27462aac1a1001c7&language=en_US&ref_=as_li_ss_tl)
-
----
 
 *As an Amazon Associate, I earn from qualifying purchases. All recommendations are based on dermatologist advice and honest research.*
 
