@@ -234,8 +234,8 @@ Knowing which condition you're dealing with can help you choose more effective t
 ## 🔗 Other Articles You Might Like
 
 * [Acne Scars vs Dark Spots: What's the Difference?](https://wonderjoyai.com/articles/acne-scars-vs-dark-spots)
-* [Why Does My Skin Look Dull?](https://wonderjoyai.com/articles/why-does-my-skin-look-dull)
-* [How to Repair a Damaged Skin Barrier](https://wonderjoyai.com/articles/repair-damaged-skin-barrier)
+* [Why Does My Skin Look Dull?](https://wonderjoyai.com/articles/why-my-skin-looks-dull)
+* [How to Repair a Damaged Skin Barrier](https://wonderjoyai.com/articles/how-to-fix-damaged-skin-barrier)
 * [Best Sunscreens for Glowing Skin](https://wonderjoyai.com/articles/best-sunscreens-glowing-skin)
 
 ---
