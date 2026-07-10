@@ -235,7 +235,7 @@ If your breakouts keep returning in the same areas despite a good skincare routi
 ## 🔗 Other Articles You Might Like
 
 - [Why Is My Skin So Oily All of a Sudden?](https://wonderjoyai.com/articles/why-is-my-skin-so-oily-all-of-a-sudden)
-- [Why Do I Get Dark Spots After Every Pimple?](https://wonderjoyai.com/articles/why-do-i-get-dark-spots-after-pimple)
+- [Why Do I Get Dark Spots After Every Pimple?](https://wonderjoyai.com/articles/why-do-i-get-dark-spots-after-pimples)
 - [Acne Scars vs Dark Spots: What's the Difference?](https://wonderjoyai.com/articles/acne-scars-vs-dark-spots)
 - [How Long Do Dark Spots Take to Fade?](https://wonderjoyai.com/articles/how-long-do-dark-spots-take-to-fade)
 
