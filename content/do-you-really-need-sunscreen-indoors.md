@@ -49,7 +49,7 @@ You should strongly consider sunscreen if you:
 These situations can increase your skin's sensitivity to sunlight.
 
 <div style="margin:20px 0;">
-<a href="YOUR-AFFILIATE-LINK-HERE" target="_blank"
+<a href="https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ?crid=1TZCNH6R9DM27&dib=eyJ2IjoiMSJ9.xRfUZrzxf-3NBtjB6sxC07wMHKmeCzP34if_shenxPvFI2zZq8MfSHNNGPHpOF7gPnGk_GgWSLButCMAsCFIEKmOJHrYmtuKsPghvpqec4CnZflvmoPqqFZYzcXHTwYqjZ7MKncPnc7X59N3du3JuRR_FQgnz37i4rYHON0TXYtQ2d864vxdCFj01o6qr92llomHxES2YCzD5twRVUJdWYfNjdoGUUJCBrK-oC4Ec3fEPBTYPNsXj-zCiOudHIA59LWArsaKIhjZBeC31VgH17dpmJ1vAuCo6bRMe3i8mn4.xpPxPCCcP9q_-hkw3sKCIFdl6HHjQA7zOII5Ulic1_Q&dib_tag=se&keywords=Broad-Spectrum%2BSPF%2B50%2BSunscreen%2Bon%2BAmazon&qid=1783712414&sprefix=broad-spectrum%2Bspf%2B50%2Bsunscreen%2Bon%2Bamazon%2B%2Caps%2C501&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=d58fe35307d42480b0c604354ebcfc5a&language=en_US&ref_=as_li_ss_tl" target="_blank"
 style="background:linear-gradient(135deg,#4facfe,#00c6ff);
 color:white;
 padding:12px 20px;
@@ -104,7 +104,7 @@ For daily indoor use, look for a sunscreen that is:
 A sunscreen you enjoy wearing is one you'll use consistently.
 
 <div style="margin:20px 0;">
-<a href="YOUR-AFFILIATE-LINK-HERE" target="_blank"
+<a href="https://www.amazon.com/Neutrogena-Oil-Free-Sunscreen-Sweatproof-Waterproof/dp/B001P92FMG?crid=2V4KJ6BWTSTWU&dib=eyJ2IjoiMSJ9.HVYUOh71AhRqit-PANhrBVw99DjljSc8QOBPe-F1_DUVaxkvfHR3LyX-pj7ybRAijKzRijsUKMlkVMAvYB_Wu2gMWdUovDcOfjQfYApJsWbGWYUndr0YFTUyhi4Godn0fldh76R9hFPAy_Vbtss51vxq2EpWF_kO9B-9cl4uS7fv1cbNEpwDLMgwpzxuCjBbsLiDFmMsmintvD_HYqxBl7aUB5qHCz4-KhtraKT_s6kHozy-VFS6mKV2jSrvYlm_LDQtGtEvc5DgIJFw2xZ9Wg99BVHOu3u-ZsweHSor89k.GtR40VB6DVy-K6i0N8VlXFCd0CEjcSWhhybQ8UCPaWA&dib_tag=se&keywords=Lightweight%2BDaily%2BFacial%2BSunscreen&qid=1783712500&sprefix=lightweight%2Bdaily%2Bfacial%2Bsunscreen%2Caps%2C521&sr=8-6-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=wonderjoyai20-20&linkId=2de733cb203e6539ab899219a4cf979d&language=en_US&ref_=as_li_ss_tl" target="_blank"
 style="background:linear-gradient(135deg,#36d1dc,#5b86e5);
 color:white;
 padding:12px 20px;
@@ -131,7 +131,7 @@ Start with:
 Keeping your skin hydrated also helps support a healthy skin barrier.
 
 <div style="margin:20px 0;">
-<a href="YOUR-AFFILIATE-LINK-HERE" target="_blank"
+<a href="https://www.amazon.com/Vanicream-Moisturizer-Hyaluronic-pH-Balanced-Dermatologist/dp/B08BW46XXK?crid=3TXKM8KIXRUP5&dib=eyJ2IjoiMSJ9.57gjZtY-G6xvWoU0obnR4tXmHtZUtKt_SfzIazc6WeYu2EXyQ6DeCKkWyysgNeI6pdB1slNNs6yYe_RVGtFbDDJZZ3KZyWn3G_ji3e6y-cboUHRt-FcpeN7rqZos848asLAIQ-DNdgLhSlLwxtiDG9PLwaP6e-afYsSksTF33Eo0AqbUaoTv7jljARyF6PJZo3meS50Wg672acy2hVtePH-0ztm6LLBVUrYgVmQRZCr6Sg70mB4YgRzx7vpa7ufVtgkqgQXJwnYesL4Sd9JHKWaC5ZiHdDf1okp0lsz05Gk.MpwDKIklqQ7tl9Eb639ohDAN4pTwpF_Z12UOJ9PZfXM&dib_tag=se&keywords=Facial+Moisturizer&qid=1783712566&sprefix=facial+moisturizer+%2Caps%2C495&sr=8-6&linkCode=ll2&tag=wonderjoyai20-20&linkId=87b81ef2fd3cfa26ac335ee724d45d6f&language=en_US&ref_=as_li_ss_tl" target="_blank"
 style="background:linear-gradient(135deg,#f6a623,#f76b1c);
 color:white;
 padding:12px 20px;
