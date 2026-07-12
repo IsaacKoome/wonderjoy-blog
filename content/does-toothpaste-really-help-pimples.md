@@ -69,7 +69,7 @@ border-radius:8px;
 text-decoration:none;
 font-weight:600;
 display:inline-block;">
-🛒 Shop Benzoyl Peroxide Treatments
+🛒 Shop Benzoyl Peroxide Treatment
 </a>
 </div>
 
@@ -144,7 +144,7 @@ border-radius:8px;
 text-decoration:none;
 font-weight:600;
 display:inline-block;">
-💧 Top Moisturizers on Amazon
+💧 Top Moisturizer on Amazon
 </a>
 </div>
 
@@ -170,7 +170,7 @@ Consistent skincare—not internet myths—is what leads to healthier skin over 
 
 - [How to Get Rid of Acne Fast (What Actually Works)](https://wonderjoyai.com/articles/how-to-get-rid-of-acne-fast)
 - [Benzoyl Peroxide vs Salicylic Acid](https://wonderjoyai.com/articles/benzoyl-peroxide-vs-salicylic-acid)
-- [What Causes Closed Comedones (Tiny Bumps)?](https://wonderjoyai.com/articles/closed-comedones-tiny-bumps)
+- [What Causes Closed Comedones (Tiny Bumps)?](https://wonderjoyai.com/articles/what-causes-closed-comedones)
 - [Can Stress Cause Acne?](https://wonderjoyai.com/articles/can-stress-cause-acne)
 
 ---
