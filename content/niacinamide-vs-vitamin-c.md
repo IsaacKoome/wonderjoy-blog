@@ -189,7 +189,7 @@ Rather than choosing one over the other, many people achieve the best results by
 
 ## 🔗 Other Articles You Might Like
 
-- [Why Are My Dark Spots Not Fading?](https://wonderjoyai.com/articles/why-dark-spots-not-fading)
+- [Why Are My Dark Spots Not Fading?](https://wonderjoyai.com/articles/why-are-my-dark-spots-not-fading)
 - [Dark Spots vs Melasma](https://wonderjoyai.com/articles/dark-spots-vs-melasma)
 - [Salicylic Acid vs Glycolic Acid](https://wonderjoyai.com/articles/salicylic-acid-vs-glycolic-acid)
 - [How to Tell Your Skin Type at Home](https://wonderjoyai.com/articles/how-to-tell-your-skin-type-at-home)

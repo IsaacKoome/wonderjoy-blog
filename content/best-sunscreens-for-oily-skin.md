@@ -150,9 +150,9 @@ Protecting your skin daily helps prevent dark spots, premature aging, and long-t
 
 ## 🔗 Other Articles You Might Like
 
-- [Do You Really Need Sunscreen Indoors?](https://wonderjoyai.com/articles/do-you-need-sunscreen-indoors)
+- [Do You Really Need Sunscreen Indoors?](https://wonderjoyai.com/articles/do-you-really-need-sunscreen-indoors)
 - [Best Moisturizers for Acne-Prone Skin (2026 Guide)](https://wonderjoyai.com/articles/best-moisturizers-for-acne-prone-skin)
-- [Niacinamide vs Vitamin C: Which Is Better for Dark Spots?](https://wonderjoyai.com/articles/niacinamide-vs-vitamin-c-dark-spots)
+- [Niacinamide vs Vitamin C: Which Is Better for Dark Spots?](https://wonderjoyai.com/articles/niacinamide-vs-vitamin-c)
 - [How to Tell Your Skin Type at Home](https://wonderjoyai.com/articles/how-to-tell-your-skin-type-at-home)
 
 ---
