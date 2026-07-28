@@ -21,9 +21,15 @@ const resultSchema = {
       additionalProperties: false,
       properties: {
         status: { type: 'string', enum: ['good', 'fair', 'retake'] },
+        score: {
+          type: 'integer',
+          minimum: 1,
+          maximum: 10,
+          description: 'Technical photo clarity only: lighting, focus, framing, and consistency. Never a skin health, beauty, or severity score.',
+        },
         notes: { type: 'array', items: { type: 'string' }, minItems: 0, maxItems: 3 },
       },
-      required: ['status', 'notes'],
+      required: ['status', 'score', 'notes'],
     },
     overview: { type: 'string' },
     observations: {
@@ -67,8 +73,16 @@ function isScanResult(value: unknown): value is ScanResult {
   const quality = value.captureQuality;
   const routine = value.routine;
   const observations = value.observations;
+  const qualityScore = quality.score;
+  const qualityStatus = String(quality.status);
+  const scoreMatchesStatus =
+    (qualityStatus === 'good' && typeof qualityScore === 'number' && qualityScore >= 8) ||
+    (qualityStatus === 'fair' && typeof qualityScore === 'number' && qualityScore >= 5 && qualityScore <= 7) ||
+    (qualityStatus === 'retake' && typeof qualityScore === 'number' && qualityScore <= 4);
   return (
-    ['good', 'fair', 'retake'].includes(String(quality.status)) &&
+    ['good', 'fair', 'retake'].includes(qualityStatus) &&
+    typeof qualityScore === 'number' && Number.isInteger(qualityScore) && qualityScore >= 1 && qualityScore <= 10 &&
+    scoreMatchesStatus &&
     validStringArray(quality.notes, 0, 3) &&
     typeof value.overview === 'string' && value.overview.length > 0 && value.overview.length < 1200 &&
     Array.isArray(observations) && observations.length >= 2 && observations.length <= 4 &&
@@ -107,7 +121,7 @@ function buildPrompt(request: ScanRequest) {
 Analyze the three user-provided face captures only for visible, non-medical cosmetic patterns. The angles are front, slight left, and slight right.
 
 User-selected concerns: ${request.profile.concerns.join(', ')}
-How their skin usually feels: ${request.profile.skinFeel}
+How their skin usually feels (self-reported, not inferred from photos): ${request.profile.skinFeel}
 Optional context: ${request.profile.notes || 'None provided'}
 
 Safety and quality rules:
@@ -116,8 +130,12 @@ Safety and quality rules:
 - Do not assess moles, lesions, wounds, or suspicious spots. If relevant, advise professional evaluation without describing a diagnosis.
 - Discuss only clearly visible patterns such as apparent surface shine, visible flaking or dryness, visible blemishes, post-blemish-looking marks, uneven-looking tone, or texture.
 - Do not infer age, ethnicity, health status, hormones, lifestyle, or sensitive traits from the images.
-- Do not assign numeric skin scores or claim precise measurements.
+- Do not infer or claim hydration or moisture level, oil production, skin-barrier health, elasticity, pore measurements, or other properties that an ordinary photograph cannot measure. You may only describe directly visible surface shine or flaking when it is clearly visible, and must acknowledge lighting limitations.
+- Keep photo observations separate from the user's self-reported concerns. Their answers may inform the routine, but must not be presented as something seen in the images.
+- Never claim that the photos prove the absence of a concern. Use wording such as "not clearly visible in these captures."
+- Do not assign numeric skin-health, beauty, attractiveness, severity, or treatment-success scores or claim precise skin measurements.
 - If lighting, blur, framing, makeup, or filters limit reliability, lower confidence and say so. Set captureQuality.status to retake if the images are too poor to support useful observations.
+- Set captureQuality.score from 1 to 10 using technical photo readability only: lighting, focus, framing, resolution, and consistency across angles. Use 8-10 for good, 5-7 for fair, and 1-4 for retake. This is never a score of the user's skin.
 - Keep the routine gentle, low-cost, and ingredient-category based. Do not prescribe medicines. Recommend patch testing, one new product at a time, moisturizer, and broad-spectrum SPF 30+ where relevant.
 - Use short, calm, supportive sentences. Avoid certainty words such as definitely, proven from your photo, or diagnosed.
 - The disclaimer must say this is not medical advice and advise a qualified clinician for painful, bleeding, rapidly changing, severe, or persistent concerns.

@@ -9,6 +9,7 @@ export interface ScanObservation {
 export interface ScanResult {
   captureQuality: {
     status: 'good' | 'fair' | 'retake';
+    score: number;
     notes: string[];
   };
   overview: string;

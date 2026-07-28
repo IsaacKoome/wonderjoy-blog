@@ -106,6 +106,9 @@
 .captureDots { display: flex; gap: .6rem; margin: 2rem 0; }
 .captureDots span { width: 30px; height: 6px; border-radius: 999px; background: #dfe5e0; }
 .captureDots .dotActive { background: var(--coral); } .captureDots .dotDone { background: var(--sage-dark); }
+.captureChecklist { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-bottom: .8rem; }
+.captureChecklist span { position: relative; padding: .65rem .7rem .65rem 1.65rem; border: 1px solid #dfe8df; border-radius: 12px; color: #53645a; background: #fbfcfa; font-size: .7rem; font-weight: 700; }
+.captureChecklist span::before { position: absolute; left: .65rem; color: #3c7156; content: '✓'; }
 .miniTip { display: flex; gap: .7rem; align-items: flex-start; padding: 1rem; border-radius: 16px; color: #4f6056; background: #eff4ec; font-size: .78rem; line-height: 1.5; }
 .miniTip svg { flex: 0 0 auto; }
 
@@ -146,6 +149,12 @@
 .resultsHero { display: flex; justify-content: space-between; gap: 2rem; align-items: flex-start; padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
 .resultsHero > div:first-child { max-width: 720px; }
 .resultsHero > div:first-child > p:last-child { margin: 1rem 0 0; color: var(--muted); line-height: 1.7; }
+.qualitySummary { display: grid; flex: 0 0 180px; gap: .65rem; justify-items: stretch; }
+.clarityScore { display: grid; padding: 1rem; border: 1px solid #dce6dd; border-radius: 18px; color: #284b3b; background: #f3f8f1; }
+.clarityScore > span { font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.clarityScore strong { margin-top: .25rem; font-family: Georgia, serif; font-size: 2.4rem; font-weight: 500; line-height: 1; }
+.clarityScore small { margin-left: .15rem; color: #6d7a72; font-family: inherit; font-size: .9rem; }
+.clarityScore em { margin-top: .45rem; color: #78837c; font-size: .58rem; font-style: normal; line-height: 1.35; }
 .qualityBadge { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .5rem; padding: .6rem .8rem; border-radius: 999px; font-size: .72rem; font-weight: 800; text-transform: capitalize; }
 .qualityBadge span { width: 7px; height: 7px; border-radius: 50%; }
 .qualitygood { color: #285c42; background: #e6f3e9; } .qualitygood span { background: #3b8a5d; }
@@ -209,6 +218,7 @@
   .buttonRow { flex-direction: column-reverse; }
   .buttonRow > * { width: 100%; }
   .resultsHero { flex-direction: column; }
+  .qualitySummary { width: 100%; }
   .observationGrid, .routineGrid, .howItWorks > div { grid-template-columns: 1fr; }
   .cautions { grid-template-columns: 1fr; }
   .buttonRowCenter { flex-direction: column; }

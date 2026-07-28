@@ -83,7 +83,7 @@ export default function ScanExperience() {
         return;
       }
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: { facingMode: 'user', width: { ideal: 1280 }, height: { ideal: 1280 } } });
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: { facingMode: 'user', width: { ideal: 1920 }, height: { ideal: 1080 } } });
         if (cancelled) { stream.getTracks().forEach((track) => track.stop()); return; }
         streamRef.current = stream;
         if (videoRef.current) {
@@ -111,14 +111,14 @@ export default function ScanExperience() {
   function capturePhoto() {
     const video = videoRef.current;
     if (!video || !cameraReady || video.videoWidth === 0) return;
-    const width = Math.min(720, video.videoWidth);
+    const width = Math.min(960, video.videoWidth);
     const height = Math.round((video.videoHeight / video.videoWidth) * width);
     const canvas = document.createElement('canvas');
     canvas.width = width; canvas.height = height;
     const context = canvas.getContext('2d');
     if (!context) return;
     context.translate(width, 0); context.scale(-1, 1); context.drawImage(video, 0, 0, width, height);
-    const nextCaptures = [...captures, { angle: currentStep.angle, dataUrl: canvas.toDataURL('image/webp', 0.82) }];
+    const nextCaptures = [...captures, { angle: currentStep.angle, dataUrl: canvas.toDataURL('image/webp', 0.78) }];
     setCaptures(nextCaptures);
     if (nextCaptures.length === CAPTURE_STEPS.length) setPhase('review');
   }
@@ -206,7 +206,10 @@ export default function ScanExperience() {
         </div>
         <div className={styles.captureCopy}><p className={styles.eyebrow}>{currentStep.eyebrow}</p><h2>{currentStep.title}</h2><p>{currentStep.instruction}</p>
           <div className={styles.captureDots} aria-label={`${captures.length} of 3 photos captured`}>{CAPTURE_STEPS.map((step, index) => <span key={step.angle} className={index < captures.length ? styles.dotDone : index === captures.length ? styles.dotActive : ''} />)}</div>
-          <div className={styles.miniTip}><SparkleIcon /><span>Natural daylight helps the analysis separate shine from shadows.</span></div>
+          <div className={styles.captureChecklist}>
+            <span>Light in front of you</span><span>Lens clean</span><span>No filters</span><span>Hold still</span>
+          </div>
+          <div className={styles.miniTip}><SparkleIcon /><span>Even front lighting helps the AI distinguish visible surface patterns from shadows. It cannot measure skin hydration.</span></div>
         </div>
       </div>}
 
@@ -233,7 +236,10 @@ export default function ScanExperience() {
       {phase === 'analyzing' && <div className={styles.analyzingCard}><div className={styles.analysisOrb}><SparkleIcon /><span className={styles.orbitOne} /><span className={styles.orbitTwo} /></div><p className={styles.eyebrow}>Creating your check-in</p><h2>Reading the visible patterns</h2><p>We are checking image quality, comparing the three angles, and building a gentle routine around your answers.</p><div className={styles.loadingLine}><span /></div><small>Please keep this page open. This usually takes under a minute.</small></div>}
 
       {phase === 'results' && result && <div className={styles.resultsWrap}>
-        <div className={styles.resultsHero}><div><p className={styles.eyebrow}>Today&apos;s cosmetic check-in</p><h2>Your skin snapshot</h2><p>{result.overview}</p></div><div className={`${styles.qualityBadge} ${styles[`quality${result.captureQuality.status}`]}`}><span /> Capture quality: {result.captureQuality.status}</div></div>
+        <div className={styles.resultsHero}><div><p className={styles.eyebrow}>Today&apos;s cosmetic check-in</p><h2>Your skin snapshot</h2><p>{result.overview}</p></div><div className={styles.qualitySummary}>
+          <div className={styles.clarityScore}><span>AI capture clarity</span><strong>{result.captureQuality.score}<small>/10</small></strong><em>Photo readability—not a skin score</em></div>
+          <div className={`${styles.qualityBadge} ${styles[`quality${result.captureQuality.status}`]}`}><span /> Capture quality: {result.captureQuality.status}</div>
+        </div></div>
         {result.captureQuality.notes.length > 0 && <div className={styles.qualityNotes}>{result.captureQuality.notes.map((note) => <span key={note}>{note}</span>)}</div>}
         <div className={styles.observationGrid}>{result.observations.map((observation) => <article key={observation.label} className={styles.observationCard}><div><span>{observation.confidence} confidence</span><SparkleIcon /></div><h3>{observation.label}</h3><p>{observation.summary}</p></article>)}</div>
         <div className={styles.routineGrid}><article className={styles.routineCard}><p className={styles.eyebrow}>Morning</p><h3>Protect and support</h3><ol>{result.routine.morning.map((step) => <li key={step}>{step}</li>)}</ol></article><article className={styles.routineCardDark}><p className={styles.eyebrow}>Evening</p><h3>Cleanse and recover</h3><ol>{result.routine.evening.map((step) => <li key={step}>{step}</li>)}</ol></article></div>
