@@ -20,6 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/articles`,
       lastModified: new Date(),
     },
+    {
+      url: `${baseUrl}/scan`,
+      lastModified: new Date(),
+    },
     ...articleUrls,
   ];
 }

@@ -10,7 +10,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <div className="w-20 h-1 bg-pink-500 mx-auto rounded-full"></div>
-          <p className="text-gray-500 mt-4">Last updated: March 31, 2026</p>
+          <p className="text-gray-500 mt-4">Last updated: July 28, 2026</p>
         </div>
 
         {/* Content */}
@@ -31,6 +31,22 @@ export default function PrivacyPage() {
               <li><strong>Usage Data:</strong> Browser type, pages visited, time spent on pages, and other analytics data</li>
               <li><strong>Cookies:</strong> Small files stored on your device to enhance your browsing experience</li>
             </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">AI Skin Check-In Photos</h2>
+            <p className="text-gray-700 mb-3">
+              If you choose to use the AI Skin Check-In, your browser captures three face images. The images remain in your browser until you press the analysis button. They are then sent securely to our AI processing provider, Google Gemini, for that single analysis request.
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>Wonderjoy AI does not write check-in photos to a database or file.</li>
+              <li>Check-in photos are not added to your article-reading profile.</li>
+              <li>The analyzer is available only to users who confirm they are 18 or older.</li>
+              <li>The feature provides cosmetic educational guidance and is not a medical service.</li>
+            </ul>
+            <p className="text-gray-700 mt-3">
+              Google processes request data under the terms that apply to the Gemini API account used by Wonderjoy AI. Do not use the tool for urgent or medical concerns.
+            </p>
           </section>
 
           <section className="mb-8">
@@ -73,12 +89,12 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Your Rights</h2>
             <p className="text-gray-700">
               Depending on your location, you may have the right to access, correct, or delete your personal data. 
-              To exercise these rights, please contact us at <a href="mailto:privacy@wonderjoy.ai" className="text-pink-500 hover:underline">privacy@wonderjoy.ai</a>.
+              To exercise these rights, please contact us at <a href="mailto:contact@wonderjoyai.com" className="text-pink-500 hover:underline">contact@wonderjoyai.com</a>.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Children&apos;s Privacy</h2>
             <p className="text-gray-700">
               Wonderjoy AI does not knowingly collect data from children under 13. If you believe a child has 
               provided us with personal information, please contact us immediately.
@@ -88,7 +104,7 @@ export default function PrivacyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Changes to This Policy</h2>
             <p className="text-gray-700">
-              We may update this privacy policy periodically. The "Last updated" date at the top indicates when 
+              We may update this privacy policy periodically. The &quot;Last updated&quot; date at the top indicates when
               changes were made. Continued use of our site constitutes acceptance of any changes.
             </p>
           </section>

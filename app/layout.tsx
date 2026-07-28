@@ -41,15 +41,16 @@ export default function RootLayout({
             <Link href="/" className="font-bold text-pink-600">
               WonderJoy AI
             </Link>
-            <div className="space-x-6">
-              <Link href="/" className="text-gray-600 hover:text-pink-600 transition">
+            <div className="flex items-center gap-3 text-sm sm:gap-6 sm:text-base">
+              <Link href="/" className="hidden text-gray-600 hover:text-pink-600 transition md:inline">
                 Home
               </Link>
               <Link href="/articles" className="text-gray-600 hover:text-pink-600 transition">
                 Articles
               </Link>
               <Link href="/about" className="text-gray-600 hover:text-pink-600 transition">About</Link>
-              <Link href="/contact" className="text-gray-600 hover:text-pink-600 transition">Contact</Link>
+              <Link href="/contact" className="hidden text-gray-600 hover:text-pink-600 transition sm:inline">Contact</Link>
+              <Link href="/scan" className="rounded-full bg-[#19221e] px-4 py-2 font-bold text-white transition hover:bg-[#395b4b]">Scan my skin</Link>
             </div>
           </div>
         </nav>
@@ -67,6 +68,7 @@ export default function RootLayout({
                   <li><Link href="/about" className="text-gray-400 hover:text-white transition">About</Link></li>
                   <li><Link href="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
                   <li><Link href="/privacy" className="text-gray-400 hover:text-white transition">Privacy Policy</Link></li>
+                  <li><Link href="/scan" className="text-gray-400 hover:text-white transition">AI Skin Check-In</Link></li>
                 </ul>
               </div>
               <div>
