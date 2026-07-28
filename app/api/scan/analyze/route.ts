@@ -5,6 +5,7 @@ export const runtime = 'nodejs';
 export const maxDuration = 60;
 
 const MAX_CAPTURE_LENGTH = 2_000_000;
+const MAX_REQUEST_LENGTH = 4_000_000;
 const ALLOWED_CONCERNS = new Set([
   'Breakouts', 'Dark marks', 'Dryness', 'Oil and shine', 'Uneven texture',
   'Visible redness', 'Fine lines', 'Routine check',
@@ -126,7 +127,7 @@ Return only the requested structured JSON.`;
 
 export async function POST(request: Request) {
   const contentLength = Number(request.headers.get('content-length') || '0');
-  if (contentLength > 6_500_000) {
+  if (contentLength > MAX_REQUEST_LENGTH) {
     return NextResponse.json({ error: 'Those photos are too large. Please retake them and try again.' }, { status: 413 });
   }
   let body: unknown;
@@ -141,7 +142,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Skin analysis is not configured yet. Add GEMINI_API_KEY to the deployment environment and try again.' }, { status: 503 });
   }
 
-  const model = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite';
+  const model = (process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite').trim();
   const imageParts = body.captures.map((capture) => {
     const parsed = parseDataUrl(capture.dataUrl)!;
     return { inlineData: { mimeType: parsed.mimeType, data: parsed.data } };
@@ -154,26 +155,52 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         contents: [{ role: 'user', parts: [{ text: buildPrompt(body) }, ...imageParts] }],
         generationConfig: {
-          temperature: 0.2,
           maxOutputTokens: 2200,
-          responseFormat: { text: { mimeType: 'application/json', schema: resultSchema } },
+          responseMimeType: 'application/json',
+          responseJsonSchema: resultSchema,
         },
       }),
       signal: AbortSignal.timeout(55_000),
     });
     if (!response.ok) {
+      const providerError = await response.text();
+      let providerMessage = response.statusText;
+      try {
+        const parsed = JSON.parse(providerError) as { error?: { message?: string; status?: string } };
+        providerMessage = parsed.error?.message || parsed.error?.status || providerMessage;
+      } catch {
+        // Keep the status text when the provider did not return JSON.
+      }
+      console.error('[scan] Gemini request failed', {
+        status: response.status,
+        model,
+        message: providerMessage.slice(0, 500),
+      });
+
+      if (response.status === 429) {
+        return NextResponse.json({ error: 'The analyzer is busy right now. Please wait a minute and try again.' }, { status: 429 });
+      }
+
       return NextResponse.json({
-        error: response.status === 429 ? 'The analyzer is busy right now. Please wait a minute and try again.' : 'The AI provider could not complete this check-in. Please try again.',
-      }, { status: response.status === 429 ? 429 : 502 });
+        error: response.status === 401 || response.status === 403
+          ? 'The analyzer is temporarily unavailable while its secure connection is restored.'
+          : response.status === 404
+            ? 'The selected analysis model is temporarily unavailable.'
+            : 'The AI provider could not complete this check-in. Please try again.',
+      }, { status: 503 });
     }
     const providerBody = (await response.json()) as { candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }> };
     const text = providerBody.candidates?.[0]?.content?.parts?.find((part) => typeof part.text === 'string')?.text;
-    if (!text) return NextResponse.json({ error: 'The analyzer returned no usable result. Please try again.' }, { status: 502 });
+    if (!text) return NextResponse.json({ error: 'The analyzer returned no usable result. Please try again.' }, { status: 503 });
     const result: unknown = JSON.parse(text);
-    if (!isScanResult(result)) return NextResponse.json({ error: 'The analyzer returned an incomplete result. Please try again.' }, { status: 502 });
+    if (!isScanResult(result)) return NextResponse.json({ error: 'The analyzer returned an incomplete result. Please try again.' }, { status: 503 });
     return NextResponse.json(result, { headers: { 'Cache-Control': 'no-store' } });
   } catch (error) {
     const timedOut = error instanceof DOMException && error.name === 'TimeoutError';
-    return NextResponse.json({ error: timedOut ? 'The analysis took too long. Please try again.' : 'The check-in could not be completed. Please try again.' }, { status: 502 });
+    console.error('[scan] Analysis failed before a valid result was returned', {
+      name: error instanceof Error ? error.name : 'UnknownError',
+      message: error instanceof Error ? error.message.slice(0, 500) : 'Unknown error',
+    });
+    return NextResponse.json({ error: timedOut ? 'The analysis took too long. Please try again.' : 'The check-in could not be completed. Please try again.' }, { status: timedOut ? 504 : 503 });
   }
 }

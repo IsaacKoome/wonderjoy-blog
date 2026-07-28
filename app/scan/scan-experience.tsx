@@ -22,6 +22,15 @@ const SKIN_FEELS = [
   'Oily in some areas and dry in others', 'Easily irritated', 'Not sure yet',
 ];
 const progressByPhase: Record<Phase, number> = { consent: 1, capture: 2, review: 2, details: 3, analyzing: 4, results: 4 };
+const MAX_ANALYSIS_REQUEST_LENGTH = 3_800_000;
+const DEFAULT_ANALYSIS_ERROR = 'The check-in could not be completed. Please try again.';
+
+function responseErrorMessage(status: number) {
+  if (status === 413) return 'Those photos are too large. Please retake them and try again.';
+  if (status === 429) return 'The analyzer is busy right now. Please wait a minute and try again.';
+  if (status === 502 || status === 503 || status === 504) return 'The analyzer could not reach its AI service. Please try again in a moment.';
+  return DEFAULT_ANALYSIS_ERROR;
+}
 
 function CameraIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.4 5.5 9.6 4h4.8l1.2 1.5H19A2.5 2.5 0 0 1 21.5 8v9A2.5 2.5 0 0 1 19 19.5H5A2.5 2.5 0 0 1 2.5 17V8A2.5 2.5 0 0 1 5 5.5h3.4Z" /><circle cx="12" cy="12.5" r="3.5" /></svg>;
@@ -123,12 +132,32 @@ export default function ScanExperience() {
     setPhase('analyzing'); setAnalysisError('');
     const payload: ScanRequest = { isAdult: true, captures, profile: { concerns, skinFeel, notes: notes.trim().slice(0, 300) } };
     try {
-      const response = await fetch('/api/scan/analyze', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-      const body = (await response.json()) as ScanResult | { error?: string };
-      if (!response.ok || !('observations' in body)) throw new Error('error' in body && body.error ? body.error : 'The check-in could not be completed. Please try again.');
-      setResult(body); setCaptures([]); setPhase('results');
+      const requestBody = JSON.stringify(payload);
+      if (requestBody.length > MAX_ANALYSIS_REQUEST_LENGTH) {
+        throw new Error('Those photos are too large. Please retake them and try again.');
+      }
+
+      const response = await fetch('/api/scan/analyze', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: requestBody });
+      const responseText = await response.text();
+      let responseBody: unknown;
+      try {
+        responseBody = responseText ? JSON.parse(responseText) : null;
+      } catch {
+        responseBody = null;
+      }
+
+      if (!response.ok) {
+        const serverMessage = responseBody && typeof responseBody === 'object' && 'error' in responseBody && typeof responseBody.error === 'string'
+          ? responseBody.error
+          : responseErrorMessage(response.status);
+        throw new Error(serverMessage);
+      }
+      if (!responseBody || typeof responseBody !== 'object' || !('observations' in responseBody)) {
+        throw new Error(DEFAULT_ANALYSIS_ERROR);
+      }
+      setResult(responseBody as ScanResult); setCaptures([]); setPhase('results');
     } catch (error) {
-      setAnalysisError(error instanceof Error ? error.message : 'The check-in could not be completed. Please try again.');
+      setAnalysisError(error instanceof Error ? error.message : DEFAULT_ANALYSIS_ERROR);
       setPhase('details');
     }
   }
