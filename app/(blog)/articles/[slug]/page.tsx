@@ -4,6 +4,31 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { getAllArticles, getArticleBySlug } from '@/lib/articles';
+import ArticleScanCta from '@/app/components/ArticleScanCta';
+
+const UNDER_18_ARTICLE_PATTERN = /\b(baby|babies|child|children|kid|kids|teen|teens|teenage|teenager|adolescent|adolescents|puberty)\b/i;
+
+function supportsAdultScan(title: string, slug: string) {
+  return !UNDER_18_ARTICLE_PATTERN.test(`${title} ${slug.replaceAll('-', ' ')}`);
+}
+
+function splitForInlineCta(content: string) {
+  const lines = content.split('\n');
+  let sectionCount = 0;
+  let insideCodeFence = false;
+
+  for (let index = 0; index < lines.length; index += 1) {
+    if (/^\s*```/.test(lines[index])) insideCodeFence = !insideCodeFence;
+    if (!insideCodeFence && /^##\s+/.test(lines[index])) {
+      sectionCount += 1;
+      if (sectionCount === 3) {
+        return { beforeCta: lines.slice(0, index).join('\n'), afterCta: lines.slice(index).join('\n') };
+      }
+    }
+  }
+
+  return { beforeCta: content, afterCta: '' };
+}
 
 export async function generateStaticParams() {
   const articles = getAllArticles();
@@ -23,6 +48,9 @@ export default async function ArticlePage({
   if (!article) {
     notFound();
   }
+
+  const showScanCta = supportsAdultScan(article.title, article.slug);
+  const { beforeCta, afterCta } = splitForInlineCta(article.content);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-pink-50">
@@ -48,9 +76,14 @@ export default async function ArticlePage({
               remarkPlugins={[remarkGfm]} 
               rehypePlugins={[rehypeRaw]}
             >
-              {article.content}
+              {beforeCta}
             </ReactMarkdown>
           </div>
+          {showScanCta && afterCta && <ArticleScanCta articleSlug={article.slug} placement="inline" />}
+          {afterCta && <div className="prose prose-lg max-w-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{afterCta}</ReactMarkdown>
+          </div>}
+          {showScanCta && <ArticleScanCta articleSlug={article.slug} placement="end" compact />}
         </div>
       </article>
     </main>
