@@ -6,6 +6,11 @@ import matter from 'gray-matter';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+function findFirstArticleImage(content: string): string | undefined {
+  const markdownImage = content.match(/!\[[^\]]*\]\((\/images\/[^)]+)\)/);
+  return markdownImage?.[1];
+}
+
 export interface Article {
   slug: string;
   title: string;
@@ -31,7 +36,7 @@ export function getAllArticles(): Article[] {
         title: data.title,
         date: data.date,
         excerpt: data.excerpt,
-        coverImage: data.coverImage,
+        coverImage: data.coverImage || findFirstArticleImage(content),
         content,
       } as Article;
     });
@@ -51,7 +56,7 @@ export function getArticleBySlug(slug: string): Article | null {
       title: data.title,
       date: data.date,
       excerpt: data.excerpt,
-      coverImage: data.coverImage,
+      coverImage: data.coverImage || findFirstArticleImage(content),
       content,
     };
   } catch {
