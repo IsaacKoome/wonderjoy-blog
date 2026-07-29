@@ -462,17 +462,34 @@ body {
 
 .articles-search input::placeholder { color: #819087; }
 
+.articles-search input::-webkit-search-cancel-button { appearance: none; }
+
 .articles-search button {
   min-height: 2.8rem;
-  padding-inline: 1rem;
   border: 0;
   border-radius: 999px;
-  color: #315f49;
-  background: #e5efe3;
   font-size: .78rem;
   font-weight: 800;
   cursor: pointer;
 }
+
+.articles-search__clear {
+  padding-inline: .7rem;
+  color: #496658;
+  background: transparent;
+}
+
+.articles-search__clear:hover { background: #edf3ea; }
+
+.articles-search__submit {
+  min-width: 6.25rem;
+  padding-inline: 1rem;
+  color: #fff;
+  background: #264c3a;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.articles-search__submit:hover { background: #397159; transform: translateY(-1px); }
 
 .articles-hero__scan {
   position: relative;
@@ -796,7 +813,8 @@ body {
   .articles-hero h1 { font-size: clamp(2.55rem, 13vw, 3.8rem); }
   .articles-hero__intro { line-height: 1.6; }
   .articles-search { min-height: 3.35rem; border-radius: 1rem; }
-  .articles-search button { min-height: 2.45rem; padding-inline: .7rem; }
+  .articles-search button { min-height: 2.45rem; padding-inline: .65rem; }
+  .articles-search__submit { min-width: 4.9rem; }
   .articles-hero__scan { padding: 1.3rem; }
   .articles-section-heading { display: block; }
   .articles-section-heading > p { margin-top: .5rem; text-align: left; }

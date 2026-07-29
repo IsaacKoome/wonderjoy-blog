@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { type FormEvent, type KeyboardEvent, useMemo, useRef, useState } from 'react';
 
 type ArticlePreview = {
   slug: string;
@@ -110,9 +110,11 @@ function ArticleImage({ article, priority = false }: { article: ArticlePreview; 
 }
 
 export function ArticleLibrary({ articles }: ArticleLibraryProps) {
+  const [draftQuery, setDraftQuery] = useState('');
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<Category>('All topics');
   const [visibleCount, setVisibleCount] = useState(18);
+  const resultsRef = useRef<HTMLElement>(null);
 
   const categorizedArticles = useMemo(
     () => articles.map((article) => ({ ...article, category: getCategory(article) })),
@@ -142,6 +144,33 @@ export function ArticleLibrary({ articles }: ArticleLibraryProps) {
     setVisibleCount(18);
   }
 
+  function applySearch() {
+    setQuery(draftQuery.trim());
+    setVisibleCount(18);
+
+    window.requestAnimationFrame(() => {
+      resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  function submitSearch(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    applySearch();
+  }
+
+  function handleSearchKeyDown(event: KeyboardEvent<HTMLInputElement>) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      applySearch();
+    }
+  }
+
+  function clearSearch() {
+    setDraftQuery('');
+    setQuery('');
+    setVisibleCount(18);
+  }
+
   return (
     <main className="articles-page">
       <section className="articles-hero">
@@ -153,25 +182,27 @@ export function ArticleLibrary({ articles }: ArticleLibraryProps) {
               Search {articles.length} practical guides for everyday concerns, confusing ingredients, and routines that fit real life.
             </p>
 
-            <div className="articles-search">
+            <form className="articles-search" role="search" onSubmit={submitSearch}>
               <label className="sr-only" htmlFor="article-search">Search skincare articles</label>
               <SearchIcon />
               <input
                 id="article-search"
                 type="search"
-                value={query}
-                onChange={(event) => {
-                  setQuery(event.target.value);
-                  setVisibleCount(18);
-                }}
+                value={draftQuery}
+                onChange={(event) => setDraftQuery(event.target.value)}
+                onKeyDown={handleSearchKeyDown}
                 placeholder="Try “dark spots,” “retinol,” or “dry skin”"
+                enterKeyHint="search"
               />
-              {query && (
-                <button type="button" onClick={() => setQuery('')} aria-label="Clear article search">
+              {(draftQuery || query) && (
+                <button className="articles-search__clear" type="button" onClick={clearSearch}>
                   Clear
                 </button>
               )}
-            </div>
+              <button className="articles-search__submit" type="submit">
+                Search
+              </button>
+            </form>
           </div>
 
           <aside className="articles-hero__scan">
@@ -230,7 +261,7 @@ export function ArticleLibrary({ articles }: ArticleLibraryProps) {
           </section>
         )}
 
-        <section className="articles-library" aria-labelledby="library-heading">
+        <section ref={resultsRef} className="articles-library" aria-labelledby="library-heading">
           <div className="articles-section-heading articles-library__heading">
             <div>
               <p className="articles-eyebrow">Browse the library</p>
