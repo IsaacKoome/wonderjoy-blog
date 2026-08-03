@@ -24,6 +24,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/scan`,
       lastModified: new Date(),
     },
+    {
+      url: `${baseUrl}/tools`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/tools/routine-checker`,
+      lastModified: new Date(),
+    },
     ...articleUrls,
   ];
 }

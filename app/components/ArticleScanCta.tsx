@@ -8,10 +8,6 @@ type ArticleScanCtaProps = {
   compact?: boolean;
 };
 
-type AnalyticsWindow = Window & {
-  gtag?: (command: 'event', eventName: string, parameters: Record<string, string>) => void;
-};
-
 function ScanSparkle() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -24,14 +20,6 @@ function ScanSparkle() {
 export default function ArticleScanCta({ articleSlug, placement, compact = false }: ArticleScanCtaProps) {
   const href = `/scan?source=article&article=${encodeURIComponent(articleSlug)}&placement=${placement}`;
 
-  function recordClick() {
-    (window as AnalyticsWindow).gtag?.('event', 'scan_cta_click', {
-      article_slug: articleSlug,
-      cta_placement: placement,
-      destination: '/scan',
-    });
-  }
-
   if (compact) {
     return (
       <aside className="article-scan-cta article-scan-cta--compact" aria-label="Try the WonderJoy AI skin check-in">
@@ -39,7 +27,7 @@ export default function ArticleScanCta({ articleSlug, placement, compact = false
           <strong>Ready to apply what you learned?</strong>
           <span>Turn today&apos;s questions into a simple, personalized routine.</span>
         </div>
-        <Link href={href} onClick={recordClick}>Start my AI check-in <span aria-hidden="true">→</span></Link>
+        <Link href={href}>Start my AI check-in <span aria-hidden="true">→</span></Link>
       </aside>
     );
   }
@@ -54,7 +42,7 @@ export default function ArticleScanCta({ articleSlug, placement, compact = false
         <div className="article-scan-cta__details"><span>About 2 minutes</span><span>Private by design</span><span>18+ only</span></div>
       </div>
       <div className="article-scan-cta__action">
-        <Link href={href} onClick={recordClick}>Scan my skin <span aria-hidden="true">→</span></Link>
+        <Link href={href}>Scan my skin <span aria-hidden="true">→</span></Link>
         <small>Educational guidance—not a medical diagnosis.</small>
       </div>
     </aside>

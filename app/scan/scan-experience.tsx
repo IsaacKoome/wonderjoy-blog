@@ -5,6 +5,7 @@
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ScanRequest, ScanResult } from '@/lib/scan-types';
+import { trackEvent } from '@/lib/analytics';
 import styles from './scan.module.css';
 
 type Phase = 'consent' | 'capture' | 'review' | 'details' | 'analyzing' | 'results';
@@ -105,6 +106,11 @@ export default function ScanExperience() {
 
   function startCapture() {
     if (!canStart) return;
+    const search = new URLSearchParams(window.location.search);
+    trackEvent('scan_started', {
+      source: search.get('source') || 'direct',
+      article_slug: search.get('article') || undefined,
+    });
     setAnalysisError(''); setCaptures([]); setPhase('capture');
   }
 
@@ -129,6 +135,7 @@ export default function ScanExperience() {
 
   async function analyze() {
     if (captures.length !== 3 || concerns.length === 0 || !skinFeel) return;
+    trackEvent('scan_analysis_requested', { concern_count: concerns.length });
     setPhase('analyzing'); setAnalysisError('');
     const payload: ScanRequest = { isAdult: true, captures, profile: { concerns, skinFeel, notes: notes.trim().slice(0, 300) } };
     try {
@@ -155,9 +162,16 @@ export default function ScanExperience() {
       if (!responseBody || typeof responseBody !== 'object' || !('observations' in responseBody)) {
         throw new Error(DEFAULT_ANALYSIS_ERROR);
       }
-      setResult(responseBody as ScanResult); setCaptures([]); setPhase('results');
+      const completedResult = responseBody as ScanResult;
+      trackEvent('scan_completed', {
+        capture_quality: completedResult.captureQuality.status,
+        capture_clarity: completedResult.captureQuality.score,
+      });
+      setResult(completedResult); setCaptures([]); setPhase('results');
     } catch (error) {
-      setAnalysisError(error instanceof Error ? error.message : DEFAULT_ANALYSIS_ERROR);
+      const message = error instanceof Error ? error.message : DEFAULT_ANALYSIS_ERROR;
+      trackEvent('scan_failed', { error_message: message.slice(0, 120) });
+      setAnalysisError(message);
       setPhase('details');
     }
   }

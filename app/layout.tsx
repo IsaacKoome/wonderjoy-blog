@@ -4,6 +4,7 @@ import './globals.css';
 import Link from 'next/link';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Canonical from './components/Canonical';
+import AnalyticsLinkTracker from './components/AnalyticsLinkTracker';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -48,6 +49,9 @@ export default function RootLayout({
               <Link href="/articles" className="text-gray-600 hover:text-pink-600 transition">
                 Articles
               </Link>
+              <Link href="/tools" className="hidden text-gray-600 hover:text-pink-600 transition lg:inline">
+                Tools
+              </Link>
               <Link href="/about" className="text-gray-600 hover:text-pink-600 transition">About</Link>
               <Link href="/contact" className="hidden text-gray-600 hover:text-pink-600 transition sm:inline">Contact</Link>
               <Link href="/scan" className="rounded-full bg-[#19221e] px-4 py-2 font-bold text-white transition hover:bg-[#395b4b]">Scan my skin</Link>
@@ -69,6 +73,7 @@ export default function RootLayout({
                   <li><Link href="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
                   <li><Link href="/privacy" className="text-gray-400 hover:text-white transition">Privacy Policy</Link></li>
                   <li><Link href="/scan" className="text-gray-400 hover:text-white transition">AI Skin Check-In</Link></li>
+                  <li><Link href="/tools" className="text-gray-400 hover:text-white transition">Free Skincare Tools</Link></li>
                 </ul>
               </div>
               <div>
@@ -99,6 +104,7 @@ export default function RootLayout({
         </footer>
         
         {/* Google Analytics */}
+        <AnalyticsLinkTracker />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html>

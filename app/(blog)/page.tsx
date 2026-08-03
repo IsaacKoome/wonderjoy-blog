@@ -23,7 +23,7 @@ export default function Home() {
                 Try the 2-minute skin check <span className="ml-3">→</span>
               </Link>
               <Link href="/articles" className="inline-flex min-h-14 items-center justify-center rounded-full border border-[#cdd7cf] bg-white px-7 font-bold text-[#29352f] transition hover:-translate-y-0.5">
-                Explore 200+ guides
+                Explore 250+ guides
               </Link>
             </div>
             <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-[#5c6861]">
@@ -39,6 +39,16 @@ export default function Home() {
               <li className="grid grid-cols-[42px_1fr] gap-3"><span className="font-serif text-2xl text-[#f4aa97]">02</span><div><b className="block">Choose your concerns</b><small className="mt-1 block leading-5 text-[#dce8de]">Tell us what you actually want help with.</small></div></li>
               <li className="grid grid-cols-[42px_1fr] gap-3"><span className="font-serif text-2xl text-[#f4aa97]">03</span><div><b className="block">Get a focused routine</b><small className="mt-1 block leading-5 text-[#dce8de]">Simple AM and PM steps you can follow.</small></div></li>
             </ol>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-[#dde5dd] bg-white px-4 py-14">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-[.85fr_1.15fr] md:items-center">
+          <div><p className="text-xs font-bold uppercase tracking-[.18em] text-[#476755]">Free skincare tools</p><h2 className="mt-3 font-serif text-4xl leading-tight tracking-[-.04em]">Make your routine easier to understand.</h2><p className="mt-4 max-w-xl leading-7 text-[#657069]">Use the AI check-in or compare active ingredients before layering another product.</p></div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Link href="/scan?source=homepage-tools" className="group rounded-2xl border border-[#d9e3da] bg-[#edf4ea] p-5 transition hover:-translate-y-1 hover:shadow-lg"><span className="text-xs font-extrabold uppercase tracking-[.12em] text-[#476755]">Camera tool</span><strong className="mt-3 block font-serif text-2xl font-medium">AI skin check-in</strong><span className="mt-5 inline-block font-bold text-[#315f49]">Start check-in <span className="transition group-hover:ml-1">→</span></span></Link>
+            <Link href="/tools/routine-checker" className="group rounded-2xl border border-[#efd4ca] bg-[#fff4ef] p-5 transition hover:-translate-y-1 hover:shadow-lg"><span className="text-xs font-extrabold uppercase tracking-[.12em] text-[#8b574c]">Ingredient tool</span><strong className="mt-3 block font-serif text-2xl font-medium">Routine compatibility checker</strong><span className="mt-5 inline-block font-bold text-[#70463d]">Check ingredients <span className="transition group-hover:ml-1">→</span></span></Link>
           </div>
         </div>
       </section>
