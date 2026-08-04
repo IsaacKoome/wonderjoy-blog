@@ -32,6 +32,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/tools/routine-checker`,
       lastModified: new Date(),
     },
+    {
+      url: `${baseUrl}/newsletter`,
+      lastModified: new Date(),
+    },
     ...articleUrls,
   ];
 }

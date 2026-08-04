@@ -10,7 +10,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <div className="w-20 h-1 bg-pink-500 mx-auto rounded-full"></div>
-          <p className="text-gray-500 mt-4">Last updated: July 28, 2026</p>
+          <p className="text-gray-500 mt-4">Last updated: August 4, 2026</p>
         </div>
 
         {/* Content */}
@@ -30,6 +30,18 @@ export default function PrivacyPage() {
               <li><strong>Personal Data:</strong> Name, email address (when you contact us or subscribe to our newsletter)</li>
               <li><strong>Usage Data:</strong> Browser type, pages visited, time spent on pages, and other analytics data</li>
               <li><strong>Cookies:</strong> Small files stored on your device to enhance your browsing experience</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Email Newsletter</h2>
+            <p className="text-gray-700 mb-3">
+              If you explicitly subscribe, Kit processes your email address on our behalf so that we can deliver the requested tracker, confirmation messages and occasional skincare emails.
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>Subscription is optional and is not required to read WonderJoy articles or use our free tools.</li>
+              <li>Every marketing email includes an unsubscribe link.</li>
+              <li>We do not sell newsletter email addresses.</li>
             </ul>
           </section>
 
@@ -89,7 +101,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Your Rights</h2>
             <p className="text-gray-700">
               Depending on your location, you may have the right to access, correct, or delete your personal data. 
-              To exercise these rights, please contact us at <a href="mailto:contact@wonderjoyai.com" className="text-pink-500 hover:underline">contact@wonderjoyai.com</a>.
+              To exercise these rights, please use our <a href="/contact" className="text-pink-500 hover:underline">contact page</a>.
             </p>
           </section>
 
@@ -112,11 +124,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
             <p className="text-gray-700">
-              For questions about this privacy policy or your data, please contact us at:
-              <br />
-              📧 <a href="mailto:2004742@students.kcau.ac.ke" className="text-pink-500 hover:underline">privacy@wonderjoy.ai</a>
-              <br />
-              🌐 <a href="https://wonderjoyai.com" className="text-pink-500 hover:underline">wonderjoy-blog.vercel.app</a>
+              For questions about this privacy policy or your data, please use our <a href="/contact" className="text-pink-500 hover:underline">contact page</a> or visit <a href="https://wonderjoyai.com" className="text-pink-500 hover:underline">wonderjoyai.com</a>.
             </p>
           </section>
         </div>

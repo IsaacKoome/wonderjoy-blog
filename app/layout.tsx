@@ -78,7 +78,8 @@ export default function RootLayout({
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-4">Connect</h3>
-                <p className="text-gray-400">Coming soon: Newsletter & Social Media</p>
+                <p className="text-gray-400 mb-3">Get one practical skincare email each week.</p>
+                <Link href="/newsletter" className="font-semibold text-white hover:text-pink-300 transition">Get the free 14-day tracker →</Link>
               </div>
             </div>
             

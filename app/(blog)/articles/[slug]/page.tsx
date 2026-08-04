@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { getAllArticles, getArticleBySlug } from '@/lib/articles';
 import ArticleScanCta from '@/app/components/ArticleScanCta';
+import NewsletterSignup from '@/app/components/NewsletterSignup';
 
 const UNDER_18_ARTICLE_PATTERN = /\b(baby|babies|child|children|kid|kids|teen|teens|teenage|teenager|adolescent|adolescents|puberty)\b/i;
 
@@ -83,7 +84,7 @@ export default async function ArticlePage({
           {afterCta && <div className="prose prose-lg max-w-none">
             <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{afterCta}</ReactMarkdown>
           </div>}
-          {showScanCta && <ArticleScanCta articleSlug={article.slug} placement="end" compact />}
+          <NewsletterSignup placement="article" />
         </div>
       </article>
     </main>

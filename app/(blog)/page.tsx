@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getAllArticles } from '@/lib/articles';
+import NewsletterSignup from '@/app/components/NewsletterSignup';
 
 export default function Home() {
   const latestArticles = getAllArticles().slice(0, 6);
@@ -51,6 +52,10 @@ export default function Home() {
             <Link href="/tools/routine-checker" className="group rounded-2xl border border-[#efd4ca] bg-[#fff4ef] p-5 transition hover:-translate-y-1 hover:shadow-lg"><span className="text-xs font-extrabold uppercase tracking-[.12em] text-[#8b574c]">Ingredient tool</span><strong className="mt-3 block font-serif text-2xl font-medium">Routine compatibility checker</strong><span className="mt-5 inline-block font-bold text-[#70463d]">Check ingredients <span className="transition group-hover:ml-1">→</span></span></Link>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pt-16">
+        <NewsletterSignup placement="homepage" />
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-20">
